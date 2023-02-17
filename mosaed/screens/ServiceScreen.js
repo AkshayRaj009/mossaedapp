@@ -39,7 +39,6 @@ const ServiceScreen = ({ navigation }) => {
     }
   }
   )
-  // '#1373DF', "#319FBB", '#2ECBAA'
   return (
     <>
           <View style={{ position: "absolute", top: HEIGHT * 0.30, height: HEIGHT * 1.35, backgroundColor: "#319FBB", opacity: 0.25, borderRadius: 20, left: 12, overflow: "hidden" }}>

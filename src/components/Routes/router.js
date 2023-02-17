@@ -32,12 +32,11 @@ import Store from '../../../mosaed/Redux/Store';
 const DrawerStack = createDrawerNavigator();
 const Drawer = () => {
 
-  // const [drawers, setDrawers] = useState(false)
 
 
 
   return (
-    <DrawerStack.Navigator   screenOptions={{ headerShown: false, drawerType: "back"/* ,ViewStyles  */,sceneContainerStyle: { backgroundColor: "#fff" }, overlayColor: "transparent", drawerContentStyle: { backgroundColor: "red" }}} drawerContent={props => <ServiceDrawer {...props} />}>
+    <DrawerStack.Navigator screenOptions={{ headerShown: false, drawerType: "back"/* ,ViewStyles  */,sceneContainerStyle: { backgroundColor: "#fff" }, overlayColor: "transparent", drawerContentStyle: { backgroundColor: "red" }}} drawerContent={props => <ServiceDrawer {...props} />}>
       <DrawerStack.Screen name="ServiceScreen" component={ServiceScreen}></DrawerStack.Screen>
       <DrawerStack.Screen name="WorkersScreen" component={WorkersScreen}></DrawerStack.Screen>
       <DrawerStack.Screen name="ProfileScreen" component={ProfileScreen}></DrawerStack.Screen>
@@ -67,6 +66,7 @@ const Router = () => {
       <Route.Screen name='TermsComponent' component={TermsComponent} />
       <Route.Screen name='ServiceRenderComponent' component={ServiceRenderComponent} />
       <Route.Screen name='SponsorShipDetails' component={SponsorShipDetails} />
+
 
     </Route.Navigator>
   )
@@ -174,6 +174,7 @@ import InputScreen from '../InputScreen';
 import GridPages from '../GridPages';
 import Calculator from '../Calculator';
 import SponsorShipDetails from '../../../mosaed/screens/SponsorShipDetails';
+import MyActivitiesScreen from '../../../VIPAPP/src/screens/MyActivitiesScreen';
 // import { interpolate } from 'react-native-reanimated';
 
 

@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { View, Text, Image, Pressable, Dimensions } from "react-native"
+import { rightbackarrow, correct } from '../../mosaed/assets/Images/index';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import HeaderComponent from './HeaderComponent';
 import LinearGradient from 'react-native-linear-gradient';
-import { rightbackarrow, correct } from '../../mosaed/assets/Images/index';
 import ButtonScreen from './ButtonScreen';
 import ModalComponent from './ModalComponent';
 import InputComponent from './InputComponent';
-import { useNavigation, useRoute } from '@react-navigation/native';
-import { TextInput } from 'react-native-gesture-handler';
 
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
@@ -32,16 +31,16 @@ const SalmaProfile = (props) => {
                         />
                     </View>
                 </View>
-                <View style={{ marginTop: HEIGHT * 0.22}}>
+                <View style={{ marginTop: HEIGHT * 0.22 }}>
                     <Text style={{ textAlign: "center", fontSize: 20, fontWeight: "bold" }}>{item.name}</Text>
                     <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 3 }}>
-                    <Pressable onPress={() => setShowcolor(!showcolor)} style={{ position: "absolute", top:-90, left: HEIGHT * 0.40 }} >
-                        <Image source={showcolor ? require("../assets/Images/bookmarkgrey.png") : require("../assets/Images/pinksaveimgae.png")} />
-                    </Pressable>
+                        <Pressable onPress={() => setShowcolor(!showcolor)} style={{ position: "absolute", top: -90, left: HEIGHT * 0.40 }} >
+                            <Image source={showcolor ? require("../assets/Images/bookmarkgrey.png") : require("../assets/Images/pinksaveimgae.png")} />
+                        </Pressable>
                         <Image style={{ marginHorizontal: 10 }} source={require("../assets/Images/smallnurseimage.png")} />
                         <Text style={{ fontSize: 16 }}>{item.designation}</Text>
                     </View>
-                    <View style={{ marginHorizontal: 50, marginTop:23,borderColor: "#f5f5f5", width: WIDTH * 0.75, borderWidth: 1 }} />
+                    <View style={{ marginHorizontal: 50, marginTop: 23, borderColor: "#f5f5f5", width: WIDTH * 0.75, borderWidth: 1 }} />
                 </View>
                 <View style={{ flexDirection: "row", marginTop: 10 }}>
                     <View style={{ marginHorizontal: 20 }}>
@@ -69,7 +68,6 @@ const SalmaProfile = (props) => {
                         style1={{ height: HEIGHT * 0.50, width: WIDTH * 0.90, marginTop: 11, borderRadius: 13 }}
                         logo={correct}
                         title="Hire Salma Saedd"
-
                         visible={ModalVisible}
                         onPress={() => setModalVisible(false)}
                         button={true}
@@ -81,7 +79,7 @@ const SalmaProfile = (props) => {
                     </ModalComponent>
                 </View>
             </View>
-            <View style={{ backgroundColor: "#fff", width: WIDTH, height: HEIGHT * 0.11, position: "absolute", bottom: 5,borderTopLeftRadius:20,borderTopRightRadius:20 }}>
+            <View style={{ backgroundColor: "#fff", width: WIDTH, height: HEIGHT * 0.11, position: "absolute", bottom: 5, borderTopLeftRadius: 20, borderTopRightRadius: 20 }}>
                 <ButtonScreen style1={{ marginTop: 20 }} navigation={() => setModalVisible(true)} title="Hire me" />
             </View>
 

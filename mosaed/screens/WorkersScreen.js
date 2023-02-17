@@ -6,7 +6,6 @@ import WorkerComponents from './WorkerComponents';
 import ButtonScreen from './ButtonScreen';
 import LinearGradient from 'react-native-linear-gradient';
 
-
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 

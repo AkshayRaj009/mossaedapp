@@ -39,9 +39,13 @@ import Modal from './src/components/modal';
 import Scroll from './src/components/Scroll';
 import FlatistModal  from './src/components/FlatlistModal';
 import Refershing from './src/components/Refershing';
-import Router from './src/components/Routes/router'
+// import Router from './src/components/Routes/router'
 import { Provider } from 'react-redux'
-import { store } from './mosaed/Redux/Store';
+// import { store } from './mosaed/Redux/Store';
+import Vip from "./VIPAPP/src/Index"
+import Emporium from "../MyApp/EMPORIUM/Emporium"
+// import {store} from "../MyApp/VIPAPP/src/Redux/Store"
+// import Router from './VIPAPP/src/Routing/Routes';
 
 const HEIGHT = Dimensions.get('window').width;
 const WIDTH = Dimensions.get('window').height;
@@ -86,14 +90,16 @@ const App = () => {
   };
 
   return (
+    
    <>
    <View style={{flex:1}}>
     {/* <SafeAreaView style={backgroundStyle} > */}
     {/* <LinearGradient start={{ x: 0.70, y: 0.20 }} end={{ x: 0, y: 0.50 }} colors={["#387FDA", "#2ECBAA"]} style={{ position: "absolute",bottom: 442, right: -390, right: -390, width: HEIGHT * 3, height: HEIGHT * 3, borderRadius: HEIGHT * 2.1 }}></LinearGradient>
    <SafeAreaView style={{flex:0}}/>  */}
       <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
+        // barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        // backgroundColor={backgroundStyle.backgroundColor}
+        barStyle={"dark-content"}
       />
       {/* <ScrollView
         contentInsetAdjustmentBehavior="automatic"
@@ -114,7 +120,7 @@ const App = () => {
             <DebugInstructions />
           </Section>
           <Section title="Learn More">
-            Read the docs to discover what to do next:
+            Read the docs to dziscover what to do next:
           </Section>
           <LearnMoreLinks />
         </View> */}
@@ -128,15 +134,18 @@ const App = () => {
           <Scroll /> */}
           {/* <Modal /> */}
           {/* <FlatistModal /> */}
-          
+          {/* <Vip /> */}
+          <Emporium />
           {/* </View> */}
      {/*  </ScrollView> */}
       {/* <Refershing /> */}
-     <Provider store={store}>
+     {/* <Provider store={store}>
      <NavigationContainer>
       <Router />
       </NavigationContainer>
-     </Provider>
+     </Provider> */}
+     
+     
     {/* </SafeAreaView> */}
    {/* <SafeAreaView style={{flex:0,backgroundColor:"#fff"}} /> */}
    </View>
