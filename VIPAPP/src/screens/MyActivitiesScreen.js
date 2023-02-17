@@ -98,14 +98,14 @@ const MyActivitiesScreen = ({ navigation }) => {
             backToScrollView(0)
           }}>
             <Text style={{ color: scroll === 0 ? "#0FC1A1" : "#DBDBDB", fontSize: 20 }} >Rent</Text>
-           {scroll===0? <View style={{borderWidth:1,borderColor:"#0FC1A1"}} ></View>:""}
+            {scroll === 0 ? <View style={{ borderWidth: 1, borderColor: "#0FC1A1" }} ></View> : ""}
           </Pressable>
           <Pressable onPress={() => {
             ScrollView(1)
             backToScrollView(1)
           }} >
             <Text style={{ color: scroll === 1 ? "#0FC1A1" : "#DBDBDB", fontSize: 20 }} >Services</Text>
-           {scroll===1? <View style={{borderWidth:1,borderColor:"#0FC1A1"}} ></View>:""}
+            {scroll === 1 ? <View style={{ borderWidth: 1, borderColor: "#0FC1A1" }} ></View> : ""}
 
           </Pressable>
           <Pressable onPress={() => {
@@ -113,7 +113,7 @@ const MyActivitiesScreen = ({ navigation }) => {
             backToScrollView(2)
           }} >
             <Text style={{ color: scroll === 2 ? "#0FC1A1" : "#DBDBDB", fontSize: 20 }} >Build</Text>
-           {scroll===2? <View style={{borderWidth:1,borderColor:"#0FC1A1"}} ></View>:""}
+            {scroll === 2 ? <View style={{ borderWidth: 1, borderColor: "#0FC1A1" }} ></View> : ""}
           </Pressable>
         </View>
         <View style={{ marginTop: 30, marginHorizontal: 20, height: HEIGHT }} >

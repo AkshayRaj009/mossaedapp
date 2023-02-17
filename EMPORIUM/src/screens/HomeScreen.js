@@ -51,7 +51,6 @@ const HomeScreen = () => {
                                 data={homeVendors}
                                 keyExtractor={item => item.id}
                                 renderItem={({ item }) =>
-
                                     <View style={{ backgroundColor: "#FFFFFF60", padding: 3, marginHorizontal: 5, alignItems: "center", height: HEIGHT * 0.11, borderRadius: 3 }} >
                                         <Image source={item.image} />
                                         <Text style={{ paddingTop: 7, paddingHorizontal: 8, fontSize: 12, fontWeight: '500' }} >{item.title}</Text>

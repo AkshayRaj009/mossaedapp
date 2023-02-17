@@ -1,4 +1,4 @@
-import { handMadeSuit, earingImage, studsImage, likeIcon, ramiAhmed, ramiAhmed2, skinCare, clockImage, walletImage, greenRightArrow } from "../assests/index"
+import { handMadeSuit, earingImage, studsImage, likeIcon, ramiAhmed, ramiAhmed2, skinCare, clockImage, walletImage, greenRightArrow,saraAhmedImage,lanaWael,saraAhamed2 } from "../assests/index"
 
 
 
@@ -122,8 +122,8 @@ export const orderList = [
         track: "Track",
         arrow: greenRightArrow,
         pending: "Pending",
-        color:"#BC7710",
-        path:"OrderStatusScreen"
+        color: "#BC7710",
+        path: "OrderStatusScreen"
     },
     {
         id: 2,
@@ -140,8 +140,8 @@ export const orderList = [
         track: "Track",
         arrow: greenRightArrow,
         pending: "On The Way",
-        color:"#10AABC",
-        path:"OrderStatusScreen"
+        color: "#10AABC",
+        path: "OrderStatusScreen"
 
     },
     {
@@ -159,7 +159,7 @@ export const orderList = [
         track: "Track",
         arrow: greenRightArrow,
         pending: "Delivered",
-        color:"#10BC82"
+        color: "#10BC82"
     },
     {
         id: 4,
@@ -176,8 +176,8 @@ export const orderList = [
         track: "Track",
         arrow: greenRightArrow,
         pending: "Pending",
-        color:"#BC7710",
-        path:"OrderStatusScreen"
+        color: "#BC7710",
+        path: "OrderStatusScreen"
 
 
     },
@@ -212,7 +212,7 @@ export const orderList = [
         track: "Track",
         arrow: greenRightArrow,
         pending: "Pending",
-        path:"OrderStatusScreen"
+        path: "OrderStatusScreen"
 
     },
     {
@@ -230,21 +230,80 @@ export const orderList = [
         track: "Track",
         arrow: greenRightArrow,
         pending: "On The Way",
-        path:"OrderStatusScreen"
+        path: "OrderStatusScreen"
 
     }
 ]
 
-export const addressData=[
+export const addressData = [
+    {
+        id: 1,
+        title: "Shipping Adress",
+        adress: "5 Capital Mall ",
+        adrres1: "55 Al Renal Street",
+        address2: "Doha, Qatar",
+        total: "Total",
+        num: "950.0",
+        qar: "QAR",
+        card: "By Visa Card"
+    }
+]
+
+
+export const saraDetails = [
+    {
+        id: 1,
+        image:lanaWael,
+        text:"Sara Ahmed"
+
+    },
+    {
+        id: 2,
+        image:lanaWael,
+        text:"Lana wael"
+
+    },
+    {
+        id: 3,
+        image:saraAhamed2,
+        text:"Sara Ahmed"
+
+    },
+    {
+        id: 4,
+        image:saraAhmedImage,
+        text:"Sara Ahmed"
+
+    }
+]
+
+export const saraData = [
+    {
+        id: 1,
+        case: "SARA"
+    },
+    {
+        id: 2,
+        case: "LANA"
+    },
+    {
+        id: 3,
+        case: "AHMED"
+    }
+
+]
+
+export const orderDetails=[
     {
         id:1,
-        title:"Shipping Adress",
-        adress:"5 Capital Mall ",
-        adrres1:"55 Al Renal Street",
-        address2:"Doha, Qatar",
+        title:"Order Details",
+        item:"3 Items",
+       qar:"250.00 Qar",
+        subtotal:"Subtotal",
+        shipping:"Shipping Fee",
         total:"Total",
-        num:"950.0",
-        qar:"QAR",
-        card:"By Visa Card"
+        qar2:"15.00 Qar",
+        qar3:"265.00 Qar",
+        total:"Total"
     }
 ]

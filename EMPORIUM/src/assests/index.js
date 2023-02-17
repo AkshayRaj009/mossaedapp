@@ -27,5 +27,7 @@ import walletImage from "../assests/images/walletImage/walletImage.png"
 import greenRightArrow from "../assests/images/greenRightArrow/greenRightArrow.png"
 import blackBackArrow from "../assests/images/blackRightArrow/blackBackArrow.png"
 import saraAhmedImage from "../assests/images/saraAhmed/saraAhmedImage.png"
+import lanaWael from "../assests/images/lanaWael/lanaWael.png"
+import saraAhamed2 from "../assests/images/saraAhamed2/saraAhamed2.png"
 
-export { splashImage, emporiumImage, getStartedImage, signInImage, backArrow, signUpImage, drawerIcon, bellIcon,searchIcon,homeMainImage,handMadeSuit,earingImage,studsImage,likeIcon,ramiAhmed,ramiAhmed2,whiteHeart,homeIcon,cartIcon,categoriesIcon,profileIcon,orderIcon,footWear,skinCare,clockImage,walletImage,greenRightArrow,blackBackArrow,saraAhmedImage  }
+export { splashImage, emporiumImage, getStartedImage, signInImage, backArrow, signUpImage, drawerIcon, bellIcon,searchIcon,homeMainImage,handMadeSuit,earingImage,studsImage,likeIcon,ramiAhmed,ramiAhmed2,whiteHeart,homeIcon,cartIcon,categoriesIcon,profileIcon,orderIcon,footWear,skinCare,clockImage,walletImage,greenRightArrow,blackBackArrow,saraAhmedImage,lanaWael,saraAhamed2  }
