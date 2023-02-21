@@ -5,12 +5,12 @@ import { HEIGHT, WIDTH } from '../constants/Dimensions'
 import { homeProduct, homeVendors } from '../constants/FlatlistArray'
 import HeaderComponent from '../components/HeaderComponent'
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
     const [color, setColor] = useState(false)
     return (
         <View>
             <SafeAreaView>
-                <HeaderComponent image2={bellIcon} title="HOME" image={drawerIcon} />
+                <HeaderComponent drawernavigation={() => navigation.toggleDrawer()} image2={bellIcon} title="HOME" image={drawerIcon} />
                 <View style={{ marginTop: 15, borderWidth: 1, borderColor: "#B89962", borderRadius: 2, height: HEIGHT * 0.050, marginHorizontal: 20, justifyContent: "center" }}>
                     <View style={{ flexDirection: "row", alignItems: "center", paddingHorizontal: 10 }} >
                         <Image source={searchIcon} />
@@ -31,7 +31,7 @@ const HomeScreen = () => {
                             data={homeProduct}
                             keyExtractor={item => item.id}
                             renderItem={({ item, index }) =>
-                                <View style={{ backgroundColor: "#FFFFFF", paddingLeft: 4, paddingTop: 3, marginHorizontal: 9 }} >
+                                <Pressable onPress={() => navigation.navigate(item.path)} style={{ backgroundColor: "#FFFFFF", paddingLeft: 4, paddingTop: 3, marginHorizontal: 9 }} >
                                     <Image source={item.image} />
                                     <View style={{ position: "absolute", right: 9, bottom: 34, backgroundColor: "#B89962", padding: 6, borderRadius: 15 }}>
                                         <Pressable onPress={() => setColor(index)} >
@@ -40,7 +40,7 @@ const HomeScreen = () => {
                                     </View>
                                     <Text style={{ paddingTop: 7, paddingHorizontal: 8, fontWeight: '500' }} >{item.title}</Text>
                                     <Text style={{ paddingHorizontal: 8, paddingTop: 2, color: "#B89962", fontSize: 12 }}>{item.text}</Text>
-                                </View>
+                                </Pressable>
                             } />
                     </View>
                     <View style={{ marginTop: HEIGHT * 0.03 }} >
@@ -51,10 +51,10 @@ const HomeScreen = () => {
                                 data={homeVendors}
                                 keyExtractor={item => item.id}
                                 renderItem={({ item }) =>
-                                    <View style={{ backgroundColor: "#FFFFFF60", padding: 3, marginHorizontal: 5, alignItems: "center", height: HEIGHT * 0.11, borderRadius: 3 }} >
+                                    <Pressable onPress={()=>navigation.navigate(item.path)} style={{ backgroundColor: "#FFFFFF60", padding: 3, marginHorizontal: 5, alignItems: "center", height: HEIGHT * 0.11, borderRadius: 3 }} >
                                         <Image source={item.image} />
                                         <Text style={{ paddingTop: 7, paddingHorizontal: 8, fontSize: 12, fontWeight: '500' }} >{item.title}</Text>
-                                    </View>
+                                    </Pressable>
                                 } />
                         </View>
                     </View>

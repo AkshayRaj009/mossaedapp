@@ -1,84 +1,74 @@
-import React, { useCallback, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { View, Text, SafeAreaView, FlatList, Image, Pressable } from 'react-native'
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
 import { bellIcon, blackBackArrow, whiteHeart } from "../assests/index"
 import { addressData, homeProduct, saraData, saraDetails } from '../constants/FlatlistArray'
 import HeaderComponent from '../components/HeaderComponent'
 import SaraDetailsComponent from '../components/SaraDetailsComponent'
+import OrderDetailsComponent from '../components/OrderDetailsComponent'
+import HomeProductComponent from '../components/HomeProductComponent'
 
 const OrderStatusScreen = ({ navigation }) => {
 
+    const [color, setColor] = useState(false)
     const ref = useRef()
-    const _viewabilityConfig = {
-        itemVisiblePercentThreshold: 50
-    }
+    const _viewabilityConfig = { itemVisiblePercentThreshold: 50 }
     const ScrollView = (index) => {
         ref.current.scrollToIndex({ animated: true, index: index })
     }
+    console.log(HEIGHT*0.0238);
     const slideshow = (type) => {
         switch (type) {
             case "SARA":
-                return (
-                    <View style={{}}>
-
-                        <SaraDetailsComponent />
+                return <View style={{}}>
+                    <SaraDetailsComponent status={true} title="Order Status" />
+                    <View style={{ marginTop: HEIGHT * 0.04, }} >
+                        <FlatList
+                            contentContainerStyle={{ flexDirection: 'row' }}
+                            data={homeProduct}
+                            keyExtractor={item => item.id}
+                            renderItem={({ item }) => <HomeProductComponent navigation={() => navigation.navigate("OrderDetailsScreen")}  {...item} />
+                            } />
                     </View>
-                )
+                </View>
             case "LANA":
-                return (
-                    // <FlatList
+                return <View style={{}}>
+                    <SaraDetailsComponent status={true} title="Order Status" />
+                    <View style={{ marginTop: HEIGHT * 0.02 }} >
+                        <FlatList
+                            contentContainerStyle={{ flexDirection: 'row' }}
+                            data={homeProduct}
+                            keyExtractor={item => item.id}
+                            renderItem={({ item }) => <HomeProductComponent navigation={() => navigation.navigate("OrderDetailsScreen")}  {...item} />
+                            } />
 
-                    //     data={homeProduct}
-                    //     keyExtractor={item => item.id}
-                    //     renderItem={({ item }) =>
-                    //         <View style={{ backgroundColor: "#FFFFFF", paddingLeft: 4, paddingTop: 3, marginHorizontal: 9, width: WIDTH }} >
-                    //             <Image source={item.image} />
-                    //             <View style={{ position: "absolute", right: 9, bottom: 34, backgroundColor: "#B89962", padding: 6, borderRadius: 15 }}>
-
-                    //                 <Image source={item.like} />
-
-                    //             </View>
-                    //             <Text style={{ paddingTop: 7, paddingHorizontal: 8, fontWeight: '500' }} >{item.title}</Text>
-                    //             <Text style={{ paddingHorizontal: 8, paddingTop: 2, color: "#B89962", fontSize: 12 }}>{item.text}</Text>
-                    //         </View>
-                    //     } />
-                    <>
-                    </>
-                )
+                    </View>
+                </View>
+            case "AHMED":
+                return <View style={{}}>
+                    <SaraDetailsComponent status={true} title="Order Status" />
+                    <View style={{ marginTop: HEIGHT * 0.02, }} >
+                        <FlatList
+                            contentContainerStyle={{ flexDirection: 'row' }}
+                            data={homeProduct}
+                            keyExtractor={item => item.id}
+                            renderItem={({ item }) => <HomeProductComponent navigation={() => navigation.navigate("OrderDetailsScreen")}  {...item} />
+                            } />
+                    </View>
+                </View>
         }
     }
     return (
-        <View style={{ backgroundColor: "#FFFFFF250" }} >
+        <View style={{ backgroundColor: "#FFFFFF250",height:HEIGHT }} >
             <SafeAreaView>
-                <HeaderComponent backnavigation={() => navigation.goBack()} color={{ color: "#313131" }} image2={bellIcon} title="ORDER#1236569" image={blackBackArrow} />
+                <HeaderComponent drawernavigation={() => navigation.goBack()} color={{ color: "#313131" }} image2={bellIcon} title="ORDER#1236569" image={blackBackArrow} />
                 <Text style={{ textAlign: "center", fontSize: 11, color: "#313131" }} >21,July,2019</Text>
                 <View style={{ marginTop: HEIGHT * 0.04, marginHorizontal: HEIGHT * 0.02 }} >
                     <FlatList
                         data={addressData}
                         keyExtractor={item => item.id}
-                        renderItem={({ item }) =>
-                            <View style={{}}>
-                                <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }} >
-                                    <Text style={{ fontSize: 18, fontWeight: "600" }} >{item.title}</Text>
-                                    <Text style={{}} >{item.total}</Text>
-                                </View>
-                                <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: HEIGHT * 0.01 }}>
-                                    <View>
-                                        <Text style={{ fontSize: 15, color: "#A8A398" }} >{item.adress}</Text>
-                                        <Text style={{ fontSize: 15, color: "#A8A398" }} >{item.adrres1}</Text>
-                                        <Text style={{ fontSize: 15, color: "#A8A398" }} >{item.address2}</Text>
-                                    </View>
-                                    <View>
-                                        <View style={{ paddingLeft: HEIGHT * 0.04 }} >
-                                            <Text style={{ fontWeight: "600", fontSize: 18 }} >{item.num}</Text>
-                                            <Text style={{ paddingLeft: 20, fontWeight: "600" }} >{item.qar}</Text>
-                                        </View>
-                                        <Text style={{}} >{item.card}</Text>
-                                    </View>
-                                </View>
-                            </View>
-                        }
-                    />
+                        renderItem={({ item }) => <OrderDetailsComponent {...item} />
+                        } />
                 </View>
                 <View style={{ marginTop: 20 }}>
                     <FlatList
@@ -86,17 +76,45 @@ const OrderStatusScreen = ({ navigation }) => {
                         data={saraDetails}
                         keyExtractor={item => item.id}
                         renderItem={({ item, index }) =>
-                            <View style={{ flexDirection: "row", alignItems: "center", marginHorizontal: HEIGHT * 0.02 }} >
-                                <Image source={item.image} />
-                                <Pressable onPress={() => { ScrollView(index) }} >
-                                    <Text style={{ paddingLeft: HEIGHT * 0.02 }}  >{item.text}</Text>
-                                </Pressable>
+                            <View style={{ borderWidth: 1, alignItems: "center", justifyContent: "center", borderLeftColor: "transparent", borderRightColor: "transparent", borderColor: "#70707018" }} >
+                                <View style={{ flexDirection: "row", alignItems: "center", marginHorizontal: HEIGHT * 0.02 }} >
+                                    <Image style={{borderWidth:color===index?2:0,borderRadius:WIDTH,borderColor:"#B89962",shadowOpacity:2}} source={item.image} />
+                                    <Pressable onPress={() => {
+                                        ScrollView(index)
+                                        setColor(index)
+                                    }} >
+                                        <Text style={{textAlign:'center', paddingLeft: HEIGHT * 0.02, color: color === index ? "black" : "grey" }}  >{item.text}</Text>
+                                        <View style={{ paddingLeft: HEIGHT * 0.02 }} >
+                                            <View style={{position:'absolute',top:HEIGHT*0.0239,left:0, height:HEIGHT*0.002,width:WIDTH*0.3077,backgroundColor: color === index ? "#B89962" : "transparent",  }} />
+                                        </View>
+
+                                    </Pressable>
+                                </View>
                             </View>
-                        }
-                    />
+
+                        } />  
+                        {/* <FlatList
+                        horizontal
+                        data={saraDetails}
+                        keyExtractor={item => item.id}
+                        renderItem={({ item, index }) =>
+                                <View style={{ flexDirection: "row", alignItems: "center",width:WIDTH,borderWidth:1,borderColor:"grey", borderLeftColor: "transparent", borderRightColor: "transparent", borderColor: "#70707030",borderTopColor:"transparent"}} >
+                                    <Pressable style={{}} onPress={() => {
+                                        // ScrollView(index)
+                                        // setColor(index)
+                                        console.log("inde",color);
+                                    }} >
+                                        <View style={{ marginHorizontal:20,width:WIDTH*0.3,borderColor: color === item.id-1 ? "#B89962" : "grey", borderWidth: color === item.id-1 ? 1 : 0 }} />
+                                    </Pressable>
+                                
+                            </View>
+
+                        } /> */}
+
                 </View>
-                <View>
-                    <FlatList
+              
+                <View style={{ width: WIDTH }} >
+                    <FlatList co
                         horizontal
                         pagingEnabled={true}
                         scrollEnabled={false}
@@ -105,16 +123,12 @@ const OrderStatusScreen = ({ navigation }) => {
                         data={saraData}
                         keyExtractor={item => item.id}
                         renderItem={({ item }) =>
-                            <><View style={{}}>
+                            <View style={{ width: WIDTH }}>
                                 {slideshow(item.case)}
                             </View>
-
-                            </>
-                        }
-                    />
+                        } />
                 </View>
             </SafeAreaView>
-
         </View>
     )
 }
