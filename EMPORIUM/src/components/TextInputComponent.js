@@ -12,7 +12,7 @@ const TextInputComponent = (props) => {
       <Text style={{ color: "#B89962", fontSize: 12, paddingTop: 10, paddingLeft: 10 }}>{text}</Text>
       <TextInput
         autoFocus={true}
-        style={{ paddingLeft: 22,paddingTop:7, color: "black"}} placeholderTextColor={"#0E1216"} />
+        style={{ paddingLeft: 22,paddingTop:HEIGHT*0.0-1, color: "black"}} placeholderTextColor={"#0E1216"} />
     </View>
     </View>
   )

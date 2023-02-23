@@ -11,7 +11,7 @@ const HomeProductComponent = (props) => {
     const{image,like,title,text,navigation}=props
     return (
         <Pressable onPress={navigation}>
-            <View style={{ backgroundColor: "#FFFFFF", paddingLeft: 4, paddingTop: 3, marginHorizontal: 9,height:HEIGHT*0.23 }} >
+            <View style={{ backgroundColor: "#FFFFFF", paddingLeft: 4, paddingTop: 3, marginHorizontal: WIDTH*0.044,height:HEIGHT*0.23 }} >
                 <Image source={image} />
                 <View style={{ position: "absolute", right: 9, bottom: 46, backgroundColor: "#B89962", padding: 5, borderRadius: 15 }}>
                     <Pressable >

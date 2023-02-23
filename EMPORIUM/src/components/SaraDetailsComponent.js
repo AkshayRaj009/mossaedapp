@@ -9,7 +9,7 @@ const SaraDetailsComponent = (props) => {
     return (
 
         <View>
-            <View style={[{ marginTop: HEIGHT * 0.01, marginHorizontal: HEIGHT * 0.02 }]} >
+            <View style={[{ marginTop: HEIGHT * 0.01, marginHorizontal: HEIGHT * 0.027 }]} >
                 <Text style={{ fontSize: 18, fontWeight: "600" }} >{title}</Text>
                 <View>
                     {status && <OrderStausComponent />}
@@ -23,7 +23,7 @@ const SaraDetailsComponent = (props) => {
                             <View style={{}}>
                                 <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
                                     <Text style={{ fontWeight: "600", fontSize: 18, }}>{item.title}</Text>
-                                    <Text style={{ paddingLeft: HEIGHT * 0.24 }}>{item.item}</Text>
+                                    <Text style={{ paddingLeft: HEIGHT * 0.20 }}>{item.item}</Text>
                                 </View>
                                 <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: HEIGHT * 0.02 }}>
                                     <Text style={{ color: "#A8A398" }} >{item.subtotal}</Text>

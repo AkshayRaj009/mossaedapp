@@ -17,12 +17,12 @@ const MakeUpScreen = ({ navigation }) => {
     const slideshow = (type) => {
         switch (type) {
             case "GENERAL":
-                return <View style={{ width: WIDTH }}>
+                return <View style={{ width: WIDTH,height:HEIGHT*0.888 }}>
                     <GeneralDetailsComponent />
                 </View>
 
             case "FACE":
-                return <View style={{ width: WIDTH }}>
+                return <View style={{width: WIDTH }}>
                     <GeneralDetailsComponent />
                 </View>
 
@@ -38,6 +38,7 @@ const MakeUpScreen = ({ navigation }) => {
                 <HeaderComponent drawernavigation={() => navigation.goBack()} image2={bellIcon} title="MAKEUP" image={blackBackArrow} />
                 <View style={{ marginTop: HEIGHT * 0.05, marginHorizontal: 7 }}>
                     <FlatList
+                        showsHorizontalScrollIndicator={false}
                         horizontal
                         data={makeupDetails}
                         keyExtractor={item => item.id}
@@ -49,6 +50,7 @@ const MakeUpScreen = ({ navigation }) => {
                     />
                 </View>
                 <FlatList
+                    showsHorizontalScrollIndicator={false}
                     horizontal
                     pagingEnabled={true}
                     scrollEnabled={false}

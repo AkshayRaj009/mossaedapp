@@ -11,7 +11,7 @@ const SignInScreen = ({navigation}) => {
 <View style={{ flex: 1 }} >
             <ImageBackground style={{ height: HEIGHT * 0.55 }} resizeMode="cover" source={signInImage} >
                 <SafeAreaView>
-                    <HeaderComponent image={backArrow} backnavigation={() => navigation.goBack()} />
+                    <HeaderComponent image={backArrow} drawernavigation={() => navigation.goBack()} />
                     <Text style={{ color: "#fff", fontSize: 55, marginTop: HEIGHT * 0.24, marginHorizontal: 30 }} >SIGN IN</Text>
                 </SafeAreaView>
             </ImageBackground>

@@ -1,14 +1,35 @@
-import { handMadeSuit, earingImage, studsImage, likeIcon, ramiAhmed, ramiAhmed2, skinCare, clockImage, walletImage, greenRightArrow, saraAhmedImage, lanaWael, saraAhamed2, handBag, cardIcon, visaIcon, minus, plus, clockBag, drawerHome, location, wisthList, support, contactIcon, termsIcon, aboutUs, languageIcon, starImage, earings2, handBag2, handBag3, earings3, yellowHeart, hairCare, bathBody, fragrances } from "../assests/index"
+import { handMadeSuit, earingImage, studsImage, likeIcon, ramiAhmed, ramiAhmed2, skinCare, clockImage, walletImage, greenRightArrow, saraAhmedImage, lanaWael, saraAhamed2, handBag, cardIcon, visaIcon, minus, plus, clockBag, drawerHome, location, wisthList, support, contactIcon, termsIcon, aboutUs, languageIcon, starImage, earings2, handBag2, handBag3, earings3, yellowHeart, hairCare, bathBody, fragrances,homeSliderImage ,homeMainImage} from "../assests/index"
 import { HEIGHT } from "./Dimensions"
 
 
-
+export const sliderData=[
+    {
+        id:1,
+        image:homeMainImage
+    },
+    {
+        id:2,
+        image:homeSliderImage
+    },
+    {
+        id:3,
+        image:homeMainImage
+    },
+    {
+        id:4,
+        image:homeSliderImage
+    },
+    {
+        id:5,
+        image:homeMainImage
+    }
+]
 
 export const homeProduct = [
     {
         id: 1,
         image: handMadeSuit,
-        title: "HandMadeSuit",
+        title: "Hand Bag",
         text: "250 QAR",
         like: likeIcon,
         path: "ProductListScreen"
@@ -26,7 +47,7 @@ export const homeProduct = [
     {
         id: 3,
         image: studsImage,
-        title: "HandMadeSuit",
+        title: "Hand Bag",
         text: "250 QAR",
         like: likeIcon,
         path: "ProductListScreen"
@@ -45,7 +66,7 @@ export const homeProduct = [
     {
         id: 5,
         image: handMadeSuit,
-        title: "HandMadeSuit",
+        title: "Hand Bag",
         text: "250 QAR",
         like: likeIcon,
         path: "ProductListScreen"
@@ -55,7 +76,7 @@ export const homeProduct = [
     {
         id: 6,
         image: studsImage,
-        title: "HandMadeSuit",
+        title: "Hand Bag",
         text: "250 QAR",
         like: likeIcon,
         path: "productListScreen"
@@ -64,7 +85,7 @@ export const homeProduct = [
     {
         id: 7,
         image: earingImage,
-        title: "HandMadeSuit",
+        title: "Hand Bag",
         text: "250 QAR",
         like: likeIcon,
         path: "productListScreen"
@@ -190,7 +211,6 @@ export const orderList = [
         pending: "On The Way",
         color: "#10AABC",
         path: "OrderStatusScreen"
-
     },
     {
         id: 3,
@@ -207,7 +227,8 @@ export const orderList = [
         track: "Track",
         arrow: greenRightArrow,
         pending: "Delivered",
-        color: "#10BC82"
+        color: "#10BC82",
+        path: "OrderStatusScreen"
     },
     {
         id: 4,
@@ -226,8 +247,6 @@ export const orderList = [
         pending: "Pending",
         color: "#BC7710",
         path: "OrderStatusScreen"
-
-
     },
     {
         id: 5,
@@ -243,7 +262,8 @@ export const orderList = [
         status: "Status",
         track: "Track",
         arrow: greenRightArrow,
-        pending: "Pending"
+        pending: "Pending",
+        path: "OrderStatusScreen"
     },
     {
         id: 6,
@@ -261,7 +281,6 @@ export const orderList = [
         arrow: greenRightArrow,
         pending: "Pending",
         path: "OrderStatusScreen"
-
     },
     {
         id: 7,
@@ -279,7 +298,6 @@ export const orderList = [
         arrow: greenRightArrow,
         pending: "On The Way",
         path: "OrderStatusScreen"
-
     }
 ]
 
@@ -313,13 +331,13 @@ export const saraDetails = [
     },
     {
         id: 3,
-        image: saraAhamed2,
+        image: lanaWael,
         text: "Sara Ahmed"
 
     },
     {
         id: 4,
-        image: saraAhmedImage,
+        image: lanaWael,
         text: "Sara Ahmed"
 
     }
@@ -532,7 +550,7 @@ export const colors = [
 export const cartDetails = [
     {
         id: 1,
-        image: clockBag,
+        image: handMadeSuit,
         text: "Hand Bag",
         like: likeIcon,
         num: "250 QAR",
@@ -543,7 +561,7 @@ export const cartDetails = [
     },
     {
         id: 2,
-        image: clockBag,
+        image: earingImage,
         text: "Hand Bag",
         like: likeIcon,
         num: "250 QAR",
@@ -554,7 +572,7 @@ export const cartDetails = [
     },
     {
         id: 3,
-        image: clockBag,
+        image: studsImage,
         text: "Hand Bag",
         like: likeIcon,
         num: "250 QAR",
@@ -565,7 +583,7 @@ export const cartDetails = [
     },
     {
         id: 4,
-        image: clockBag,
+        image: studsImage,
         text: "Hand Bag",
         like: likeIcon,
         num: "250 QAR",
@@ -576,7 +594,7 @@ export const cartDetails = [
     },
     {
         id: 5,
-        image: clockBag,
+        image: earingImage,
         text: "Hand Bag",
         like: likeIcon,
         num: "250 QAR",
@@ -587,7 +605,7 @@ export const cartDetails = [
     },
     {
         id: 6,
-        image: clockBag,
+        image: earingImage,
         text: "Hand Bag",
         like: likeIcon,
         num: "250 QAR",
@@ -598,7 +616,7 @@ export const cartDetails = [
     },
     {
         id: 7,
-        image: clockBag,
+        image: earingImage,
         text: "Hand Bag",
         like: likeIcon,
         num: "250 QAR",
@@ -742,22 +760,18 @@ export const supportData = [
     {
         id: 1,
         text: "FULL NAME",
-
     },
     {
         id: 2,
         text: "PHONE NUMBER",
-
     },
     {
         id: 3,
         text: "ADDRESS LANE",
-
     },
     {
         id: 4,
         text: "CITY",
-
     },
     {
         id: 7,
@@ -767,11 +781,55 @@ export const supportData = [
     {
         id: 5,
         text: "POSTAL CODE",
-
     },
     {
         id: 6,
         text: "COUNTRY",
+    }
+]
 
+export const notification = [
+    {
+        id: 1,
+        title: "Sucessful Order",
+        text: "Your orderhas been sucessfully completed Thank you",
+        date: "21 July,2019"
+    },
+    {
+        id: 2,
+        title: "Sucessful Order",
+        text: "Your orderhas been sucessfully completed Thank you",
+        date: "21 July,2019"
+    },
+    {
+        id: 3,
+        title: "Sucessful Order",
+        text: "Your orderhas been sucessfully completed Thank you",
+        date: "21 July,2019"
+    },
+    {
+        id: 4,
+        title: "Sucessful Order",
+        text: "Your orderhas been sucessfully completed Thank you",
+        date: "21 July,2019"
+    },
+    {
+        id: 5,
+        title: "Sucessful Order",
+        text: "Your orderhas been sucessfully completed Thank you",
+        date: "21 July,2019"
+    },
+    {
+        id: 6,
+        title: "Sucessful Order",
+        text: "Your orderhas been sucessfully completed Thank you",
+        date: "21 July,2019"
+    },
+    {
+        id: 7,
+        title: "Sucessful Order",
+        text: "Your orderhas been sucessfully completed Thank you",
+        text1: "Thank you",
+        date: "21 July,2019"
     }
 ]

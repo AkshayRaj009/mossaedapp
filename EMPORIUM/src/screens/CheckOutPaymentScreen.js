@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { View, Text, SafeAreaView, FlatList, Image, Pressable } from 'react-native'
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
-import { backArrow, bellIcon, drawerIcon, blackBackArrow } from "../assests/index"
+import { bellIcon, whiteTick3, blackBackArrow } from "../assests/index"
 import HeaderComponent from '../components/HeaderComponent'
 import PaymentProgress from '../components/PaymentProgress'
 import { addressData, homeProduct, saraData, saraDetails } from '../constants/FlatlistArray'
@@ -25,6 +25,7 @@ const CheckOutPaymentScreen = ({ navigation }) => {
                     <SaraDetailsComponent style1={{ marginTop: HEIGHT * 0. - 70 }} />
                     <View style={{ marginTop: HEIGHT * 0.02 }} >
                         <FlatList
+                            showsHorizontalScrollIndicator={false}
                             contentContainerStyle={{ flexDirection: 'row' }}
                             data={homeProduct}
                             keyExtractor={item => item.id}
@@ -38,6 +39,7 @@ const CheckOutPaymentScreen = ({ navigation }) => {
                     <SaraDetailsComponent />
                     <View style={{ marginTop: HEIGHT * 0.02 }} >
                         <FlatList
+                            showsHorizontalScrollIndicator={false}
                             contentContainerStyle={{ flexDirection: 'row' }}
                             data={homeProduct}
                             keyExtractor={item => item.id}
@@ -51,6 +53,7 @@ const CheckOutPaymentScreen = ({ navigation }) => {
                     <SaraDetailsComponent />
                     <View style={{ marginTop: HEIGHT * 0.02 }} >
                         <FlatList
+                            showsHorizontalScrollIndicator={false}
                             contentContainerStyle={{ flexDirection: 'row' }}
                             data={homeProduct}
                             keyExtractor={item => item.id}
@@ -66,23 +69,22 @@ const CheckOutPaymentScreen = ({ navigation }) => {
             <SafeAreaView>
                 <HeaderComponent drawernavigation={() => navigation.goBack()} image2={bellIcon} title="CHECKOUT" image={blackBackArrow} />
                 <View style={{ marginTop: HEIGHT * 0.01, }} >
-                    <PaymentProgress borderColor={{ borderColor: "#B89962", borderWidth: 1.3 }} color={{ borderColor: "#B89962", backgroundColor: "#B89962" }} textStyle={{ color: "black" }} summaryStyle={{ color: "black" }} style3={{ backgroundColor: "#B89962" }} border={{ borderColor: "#B89962", borderWidth: 1.3 }} />
+                    <PaymentProgress image={whiteTick3} borderColor={{ borderColor: "#B89962", borderWidth: 1.3 }} color={{ borderColor: "#B89962", backgroundColor: "#B89962" }} textStyle={{ color: "black" }} summaryStyle={{ color: "black" }} style3={{ backgroundColor: "#B89962" }} border={{ borderColor: "#B89962", borderWidth: 1.3 }} />
                 </View>
-                <Text style={{ textAlign: "center", fontSize: 11, color: "#313131" }} >21,July,2019</Text>
                 <View style={{ marginTop: HEIGHT * 0.02, marginHorizontal: HEIGHT * 0.02 }} >
                     <FlatList
+                        showsHorizontalScrollIndicator={false}
                         data={addressData}
                         keyExtractor={item => item.id}
                         renderItem={({ item }) =>
-                            <>
-                                <OrderDetailsComponent {...item} />
-                            </>
+                            <OrderDetailsComponent {...item} />
                         }
                     />
                 </View>
                 <View style={{ marginTop: 20 }}>
                     <FlatList
                         horizontal
+                        showsHorizontalScrollIndicator={false}
                         data={saraDetails}
                         keyExtractor={item => item.id}
                         renderItem={({ item, index }) =>
@@ -98,6 +100,7 @@ const CheckOutPaymentScreen = ({ navigation }) => {
                 <View style={{ width: WIDTH }} >
                     <FlatList
                         horizontal
+                        showsHorizontalScrollIndicator={false}
                         pagingEnabled={true}
                         scrollEnabled={false}
                         ref={ref}
@@ -115,9 +118,11 @@ const CheckOutPaymentScreen = ({ navigation }) => {
                 </View>
 
             </SafeAreaView>
-            <View style={{}} >
+            <View style={{ marginTop: HEIGHT * 0.04 }} >
                 <ButtonComponent navigation={() => navigation.navigate("CardDetailsScreen")} title="PAY" />
-                <Text style={{ color: "#A8A398", textAlign: "center", marginTop: HEIGHT * 0.01 }} >Cancel</Text>
+                <Pressable onPress={() => navigation.goBack()} >
+                    <Text style={{ color: "#A8A398", textAlign: "center", marginTop: HEIGHT * 0.01 }} >Cancel</Text>
+                </Pressable>
             </View>
         </View>
     )

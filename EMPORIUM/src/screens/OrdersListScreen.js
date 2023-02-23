@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, SafeAreaView, FlatList, Image, Pressable } from 'react-native'
+import { View, Text, SafeAreaView, FlatList, Image, Pressable ,ScrollView} from 'react-native'
 import { bellIcon, blackBackArrow } from "../assests/index"
 import { HEIGHT } from '../constants/Dimensions'
 import { orderList } from '../constants/FlatlistArray'
@@ -10,12 +10,12 @@ const OrdersListScreen = ({ navigation }) => {
     <View style={{ backgroundColor: "#FFFFFF240" }} >
       <SafeAreaView>
         <HeaderComponent drawernavigation={() => navigation.goBack()} image2={bellIcon} title="MY ORDERS" image={blackBackArrow} />
-        <View style={{ marginTop: 6 }} >
+        <ScrollView style={{ marginTop: 6, height:HEIGHT*0.9,}} >
           <FlatList
             data={orderList}
             keyExtractor={item => item.id}
             renderItem={({ item }) =>
-              <Pressable onPress={() => navigation.navigate(item.path)} style={{ backgroundColor: "#fff", marginHorizontal: 20, marginTop: 13 }} >
+              <Pressable onPress={() => navigation.navigate(item.path)} style={{ backgroundColor: "#fff", marginHorizontal: 20, marginTop: 13,flex:1 }} >
                 <View style={{ flexDirection: "row", marginHorizontal: 10 }} >
                   <Image style={{ marginTop: 13 }} source={item.image} />
                   <View style={{ flexDirection: "row", marginTop: 20 }} >
@@ -37,11 +37,11 @@ const OrdersListScreen = ({ navigation }) => {
                     </View>
                   </View>
                 </View>
-                <View style={{ borderWidth: 1, borderColor: "#70707015", marginHorizontal: HEIGHT * 0.03,marginTop:HEIGHT*0.01 }} />
+                <View style={{ borderWidth: 1, borderColor: "#70707015", marginHorizontal: HEIGHT * 0.03, marginTop: HEIGHT * 0.01 }} />
                 <View style={{ marginHorizontal: 20, marginTop: 20 }} >
                   <View style={{ flexDirection: "row", justifyContent: "space-between", }} >
                     <Text style={{ fontSize: 11, color: "#A8A398" }} >{item.status}</Text>
-                    <View style={{ flexDirection: "row", alignItems: "center", paddingRight: HEIGHT*0.03 }} >
+                    <View style={{ flexDirection: "row", alignItems: "center", paddingRight: HEIGHT * 0.03 }} >
                       <Text style={{ color: "#10BC82", }} >{item.track}</Text>
                       <Image style={{ marginLeft: 10 }} source={item.arrow} />
                     </View>
@@ -51,7 +51,7 @@ const OrdersListScreen = ({ navigation }) => {
               </Pressable>
             }
           />
-        </View>
+        </ScrollView>
       </SafeAreaView>
     </View>
   )

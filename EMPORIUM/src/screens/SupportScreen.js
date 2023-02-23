@@ -29,7 +29,7 @@ const SupportScreen = ({navigation}) => {
       }
   })
   return (
-    <View style={{ backgroundColor: "#fff", flex: 1 }} >
+    <View style={{ backgroundColor: "#fff",height:HEIGHT }} >
       <SafeAreaView>
         <HeaderComponent drawernavigation={() => navigation.toggleDrawer()} color={{ color: "#313131" }} image2={bellIcon} title="SUPPORT" image={blackBackArrow} />
         <Text style={{ textAlign: "center", marginHorizontal: HEIGHT * 0.08, marginTop: HEIGHT * 0.08, fontSize: 18 }} >Loreum Ipsum is simply dummy text of the printin</Text>

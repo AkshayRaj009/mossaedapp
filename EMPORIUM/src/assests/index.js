@@ -70,5 +70,14 @@ import saraAhmedSmall from "../assests/images/saraAhmedSmall/saraAhmedSmall.png"
 import whiteBellIcon from "../assests/images/whiteBellIcon/whiteBellIcon.png"
 import fullimage from '../assests/images/fullImage/fulImage.png'
 import phoneCallIcon from "../assests/images/phoneCallIcon/phoneCallIcon.png"
+import yellowStar from "../assests/images/yellowStar/yellowStar.png"
+import logOutIcon from "../assests/images/logOutIcon/logOutIcon.png"
+import whiteTick2 from "../assests/images/whiteTick2/whiteTick2.png"
+import whiteTick3 from "../assests/images/whiteTick3/whiteTick3.png"
+import rightArrow from "../assests/images/rightArrow/rightArrow.png"
+import homeSliderImage from "../assests/images/homeSlideImage/homeSliderImage.png"
+import editIcon from "../assests/images/editIcon/editIcon.png"
+import saleOfferImage from '../assests/images/saleOfferImage/saleOfferImage.png'
+import homeOfferImage from "../assests/images/homeOfferImage/homeOfferImage.png"
 
-export { splashImage, emporiumImage, getStartedImage, signInImage, backArrow, signUpImage, drawerIcon, bellIcon,searchIcon,homeMainImage,handMadeSuit,earingImage,studsImage,likeIcon,ramiAhmed,ramiAhmed2,whiteHeart,homeIcon,cartIcon,categoriesIcon,profileIcon,orderIcon,footWear,skinCare,clockImage,walletImage,greenRightArrow,blackBackArrow,saraAhmedImage,lanaWael,/* saraAhamed2 */ handBag,saraAhamed3,cardIcon,visaIcon,homeProductImage,plusImage,whiteLove,ahmed,minus,plus,clockBag,drawerImage,drawerHome,location,wisthList,support,contactIcon,termsIcon,aboutUs,languageIcon,profileImage,starImage,earings2,handBag2,handBag3,earings3,yellowHeart,doubleArrow,messageIcon,callIcon,hairCare,bathBody,fragrances,smallWhiteTick,saraAhmedImage2,saraAhmed3,saraAhmed5,saraAhmedSmall,whiteBellIcon,fullimage,phoneCallIcon }
+export { splashImage, emporiumImage, getStartedImage, signInImage, backArrow, signUpImage, drawerIcon, bellIcon,searchIcon,homeMainImage,handMadeSuit,earingImage,studsImage,likeIcon,ramiAhmed,ramiAhmed2,whiteHeart,homeIcon,cartIcon,categoriesIcon,profileIcon,orderIcon,footWear,skinCare,clockImage,walletImage,greenRightArrow,blackBackArrow,saraAhmedImage,lanaWael,/* saraAhamed2 */ handBag,saraAhamed3,cardIcon,visaIcon,homeProductImage,plusImage,whiteLove,ahmed,minus,plus,clockBag,drawerImage,drawerHome,location,wisthList,support,contactIcon,termsIcon,aboutUs,languageIcon,profileImage,starImage,earings2,handBag2,handBag3,earings3,yellowHeart,doubleArrow,messageIcon,callIcon,hairCare,bathBody,fragrances,smallWhiteTick,saraAhmedImage2,saraAhmed3,saraAhmed5,saraAhmedSmall,whiteBellIcon,fullimage,phoneCallIcon,yellowStar,logOutIcon,whiteTick2,whiteTick3,rightArrow,homeSliderImage,editIcon,saleOfferImage,homeOfferImage }

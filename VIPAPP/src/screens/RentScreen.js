@@ -97,3 +97,5 @@ const RentScreen = ({ navigation }) => {
     )
 }
 export default RentScreen
+
+

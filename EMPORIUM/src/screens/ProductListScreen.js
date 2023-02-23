@@ -6,6 +6,7 @@ import { colors } from '../constants/FlatlistArray'
 import HeaderComponent from '../components/HeaderComponent'
 
 const ProductListScreen = ({ navigation }) => {
+
     return (
         <View>
             <ImageBackground style={{ flex: 1, height: HEIGHT * 0.57 }} source={homeProductImage} >
@@ -33,6 +34,7 @@ const ProductListScreen = ({ navigation }) => {
                         <Text style={{ fontWeight: '600', fontSize: 14, marginTop: HEIGHT * 0.02 }} >CHOOSE COLOR</Text>
                         <View style={{ marginTop: HEIGHT * 0.01 }} >
                             <FlatList
+                            showsHorizontalScrollIndicator={false}
                                 horizontal
                                 data={colors}
                                 keyExtractor={item => item.id}
@@ -43,7 +45,7 @@ const ProductListScreen = ({ navigation }) => {
                                 }
                             />
                         </View>
-                        <View style={{ flexDirection: "row", marginTop: HEIGHT * 0.05, justifyContent: "space-between" }} >
+                        <View style={{ flexDirection: "row", marginTop: HEIGHT * 0.03, justifyContent: "space-between" }} >
                             <Text style={{ fontSize: 25, fontWeight: "700" }} >79.9  QAR</Text>
                             <Pressable onPress={() => navigation.navigate("AddToCart")}>
                                 <Text style={{ backgroundColor: "#B89962", textAlign: "center", color: "#fff", padding: 10 }} >ADD TO CART </Text>

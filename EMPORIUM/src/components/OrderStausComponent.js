@@ -11,15 +11,15 @@ const OrderStausComponent = () => {
                     <View style={[{ justifyContent: "center", alignItems: "center", height: WIDTH * 0.04, width: WIDTH * 0.04, borderRadius: WIDTH * 0.4 / 2, borderColor: "#B89962", borderWidth: 2, backgroundColor: "#B89962" }]} >
                         <Image source={smallWhiteTick} />
                     </View>
-                    <View style={[{ borderWidth: 1, height: 1, width: WIDTH * 0.23, borderColor: "#B89962" }]} />
+                    <View style={[{ borderWidth: 1.3, height: 1, width: WIDTH * 0.23, borderColor: "#B89962" }]} />
                     <View style={[{ justifyContent: "center", alignItems: "center", height: WIDTH * 0.04, width: WIDTH * 0.04, borderRadius: WIDTH * 0.4 / 2, borderColor: "#B89962", borderWidth: 2, backgroundColor: "#B89962" }]} >
                         <Image source={smallWhiteTick} />
                     </View>
-                    <View style={[{ borderWidth: 1, height: 1, width: WIDTH * 0.23, borderColor: "#B89962" }]} />
+                    <View style={[{ borderWidth: 1.3, height: 1, width: WIDTH * 0.23, borderColor: "#B89962" }]} />
                     <View style={[{ justifyContent: "center", alignItems: "center", height: WIDTH * 0.04, width: WIDTH * 0.04, borderRadius: WIDTH * 0.4 / 2, borderColor: "#B89962", borderWidth: 2, backgroundColor: "#B89962" }]} >
                         <Image source={smallWhiteTick} />
                     </View>
-                    <View style={[{ borderWidth: 1, height: 1, width: WIDTH * 0.23, borderColor: "#DFE1DE" }]} />
+                    <View style={[{ borderWidth: 1.3, height: 1, width: WIDTH * 0.23, borderColor: "#DFE1DE" }]} />
                     <View style={[{ justifyContent: "center", alignItems: "center", height: WIDTH * 0.04, width: WIDTH * 0.04, borderRadius: WIDTH * 0.4 / 2, borderColor: "#DFE1DE", borderWidth: 2 }]} />
                 </View>
             </View>

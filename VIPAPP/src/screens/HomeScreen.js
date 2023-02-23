@@ -45,26 +45,24 @@ const HomeScreen = ({ navigation, props }) => {
                                 data={homeData}
                                 keyExtractor={item => item.id}
                                 renderItem={({ item }) =>
-                                    <>
-                                        <Animated.View entering={FadeInLeft.delay(item.id * 310)}>
-                                            <Pressable onPress={() => navigation.navigate(item.path)} style={{ backgroundColor: "#181D23", height: HEIGHT * 0.16, marginHorizontal: 22, marginVertical: 10, }}>
-                                                <Image style={{ position: "absolute", right: 0, bottom: 0 }} source={homeMaskBottom} />
-                                                <View style={{ flexDirection: "row", marginTop: HEIGHT * 0.04, marginHorizontal: 24 }}>
-                                                    <View style={{ width: WIDTH * 0.16, width: item.width, height: item.height, borderColor: item.bordercolor, borderWidth: 1, justifyContent: "center", alignItems: "center", borderRadius: 11 }}>
-                                                        <Image source={item.image} />
-                                                    </View>
-                                                    <View style={{ marginHorizontal: 30 }}>
-                                                        <Text style={{ color: "#fff", fontSize: 27, fontWeight: "bold" }}>
-                                                            {item.title}</Text>
-                                                        <View style={{ flexWrap: "wrap", marginHorizontal: 10, marginTop: 2 }}>
-                                                            <Text style={{ color: "#636B74", fontSize: 17 }}>{item.text}</Text>
-                                                            <Text style={{ color: "#636B74", fontSize: 17 }}>{item.text1}</Text>
-                                                        </View>
+                                    <Animated.View entering={FadeInLeft.delay(item.id * 310)}>
+                                        <Pressable onPress={() => navigation.navigate(item.path)} style={{ backgroundColor: "#181D23", height: HEIGHT * 0.16, marginHorizontal: 22, marginVertical: 10, }}>
+                                            <Image style={{ position: "absolute", right: 0, bottom: 0 }} source={homeMaskBottom} />
+                                            <View style={{ flexDirection: "row", marginTop: HEIGHT * 0.04, marginHorizontal: 24 }}>
+                                                <View style={{ width: WIDTH * 0.16, width: item.width, height: item.height, borderColor: item.bordercolor, borderWidth: 1, justifyContent: "center", alignItems: "center", borderRadius: 11 }}>
+                                                    <Image source={item.image} />
+                                                </View>
+                                                <View style={{ marginHorizontal: 30 }}>
+                                                    <Text style={{ color: "#fff", fontSize: 27, fontWeight: "bold" }}>
+                                                        {item.title}</Text>
+                                                    <View style={{ flexWrap: "wrap", marginHorizontal: 10, marginTop: 2 }}>
+                                                        <Text style={{ color: "#636B74", fontSize: 17 }}>{item.text}</Text>
+                                                        <Text style={{ color: "#636B74", fontSize: 17 }}>{item.text1}</Text>
                                                     </View>
                                                 </View>
-                                            </Pressable>
-                                        </Animated.View>
-                                    </>
+                                            </View>
+                                        </Pressable>
+                                    </Animated.View>
                                 }
                             />
                         </View>
