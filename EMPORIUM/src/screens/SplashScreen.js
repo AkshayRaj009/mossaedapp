@@ -11,21 +11,12 @@ const SplashScreen = ({ navigation }) => {
 
   const getData = async () => {
     const value = await AsyncStorage.getItem('loggedIn')
-   
-    // setTimeout(()=>{
       value ?navigation.navigate("HomeScreen"): navigation.navigate("GetStartedScreen")
-
-
-    // },1500)
     console.log("value", value);
-
   }
   useEffect(() => {
-    
-    // navigation.navigate("GetStartedScreen")
     getData()
-  
- 
+
 }, [])
 
   return (
