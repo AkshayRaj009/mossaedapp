@@ -10,12 +10,13 @@ const OrdersListScreen = ({ navigation }) => {
     <View style={{ backgroundColor: "#FFFFFF240" }} >
       <SafeAreaView>
         <HeaderComponent drawernavigation={() => navigation.goBack()} image2={bellIcon} title="MY ORDERS" image={blackBackArrow} />
-        <ScrollView style={{ marginTop: 6, height:HEIGHT*0.9,}} >
+        <ScrollView style={{marginTop:HEIGHT*0.03  }} >
           <FlatList
+          style={{height: Platform.OS === 'ios' ? 1440 : 1520}}
             data={orderList}
             keyExtractor={item => item.id}
             renderItem={({ item }) =>
-              <Pressable onPress={() => navigation.navigate(item.path)} style={{ backgroundColor: "#fff", marginHorizontal: 20, marginTop: 13,flex:1 }} >
+              <Pressable onPress={() => navigation.navigate(item.path)} style={{ backgroundColor: "#fff", marginHorizontal: 20, marginTop: 13,height: Platform.OS === 'ios' ? 183 : 194 }} >
                 <View style={{ flexDirection: "row", marginHorizontal: 10 }} >
                   <Image style={{ marginTop: 13 }} source={item.image} />
                   <View style={{ flexDirection: "row", marginTop: 20 }} >

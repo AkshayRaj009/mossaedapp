@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, SafeAreaView, Image, FlatList } from 'react-native'
-import { bellIcon, drawerIcon } from "../assests/index"
+import { bellIcon, drawerIcon,yellowHeart } from "../assests/index"
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
 import { makeUpDatas } from '../constants/FlatlistArray'
 import Animated, { interpolate, useAnimatedStyle } from 'react-native-reanimated';
@@ -29,14 +29,18 @@ const WishListScreen = ({ navigation }) => {
         <HeaderComponent drawernavigation={() => navigation.toggleDrawer()} image2={bellIcon} title="WISHLIST" image={drawerIcon} />
         <Animated.View style={[{ marginTop: HEIGHT * 0.02, marginHorizontal: 10 }, animationstyles]}>
           <FlatList
+          style={{height: Platform.OS === 'ios' ? 713 : 760}}
             numColumns={2}
             data={makeUpDatas}
             keyExtractor={item => item.id}
             renderItem={({ item }) =>
               <View style={{ marginHorizontal: HEIGHT * 0.02, backgroundColor: "#ffff", marginTop: HEIGHT * 0.02, height: HEIGHT * 0.30 }} >
                 <Image source={item.image} />
+                <View style={{ justifyContent: "center", alignItems: "center", height: WIDTH * 0.08, width: WIDTH * 0.08, borderRadius: WIDTH * 0.8 / 2, borderWidth: 2, backgroundColor: "#fff", position: "absolute",  left: HEIGHT * 0.12, bottom:HEIGHT*0.06,borderColor: "#fff" }} >
+                <Image source={yellowHeart} />
+              </View>
                 <View style={{ paddingLeft: 20, paddingTop: HEIGHT * 0.02 }} >
-                  <Text style={{ fontSize: 17, fontWeight: "600" }} >{item.title}</Text>
+                  <Text style={{ fontSize: 19, fontWeight: "600" }} >{item.title}</Text>
                   <Text style={{ color: "#B89962", fontSize: 15, marginTop: 5 }} >{item.num}</Text>
                 </View>
               </View>

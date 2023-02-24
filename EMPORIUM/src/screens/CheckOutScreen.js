@@ -50,8 +50,6 @@ const CheckOutScreen = ({ navigation }) => {
                         <Text style={{ color: "#A8A398", textAlign: "center", marginTop: HEIGHT * 0.01 }} >Cancel</Text>
                     </Pressable>
                 </View>
-                <Image style={{}} source={saleOfferImage} />
-
             </SafeAreaView>
         </View>
     )

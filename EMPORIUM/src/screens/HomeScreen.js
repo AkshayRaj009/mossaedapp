@@ -57,15 +57,15 @@ const HomeScreen = ({ navigation }) => {
                 <View style={{ marginHorizontal: WIDTH * 0.06 }} >
                     <Text style={{ fontSize: 13, fontWeight: '500', marginTop: HEIGHT * 0.001 }} >FEATURED PRODUCT</Text>
                     <View style={{ marginTop: HEIGHT * 0.02 }} >
-                        <FlatList style={{ width: WIDTH,marginLeft:-9 }}
+                        <FlatList style={{ width: WIDTH  }}
                             showsHorizontalScrollIndicator={false}
                             horizontal
                             data={homeProduct}
                             keyExtractor={item => item.id}
                             renderItem={({ item, index }) =>
-                                <Pressable onPress={() => navigation.navigate(item.path)} style={{ backgroundColor: "#FFFFFF", paddingLeft: 4, paddingTop: 3, width: WIDTH * 0.302, height: HEIGHT * 0.22,marginHorizontal:WIDTH*0.03  }} >
+                                <Pressable onPress={() => navigation.navigate(item.path)} style={{ backgroundColor: "#FFFFFF", paddingLeft: 4, paddingTop: 3, width: WIDTH * 0.302,  height: Platform.OS === 'ios' ? 183 : 189, marginHorizontal: WIDTH * 0.03, }} >
                                     <Image source={item.image} />
-                                    <View style={[{ justifyContent: "center", alignItems: "center", height: WIDTH * 0.06, width: WIDTH * 0.06, borderRadius: WIDTH * 0.6 / 2, borderColor: "#B89962", borderWidth: 2, backgroundColor: "#B89962", position: "absolute", right: HEIGHT * 0.01, bottom: HEIGHT * 0.044, }]} >
+                                    <View style={[{ justifyContent: "center", alignItems: "center", height: WIDTH * 0.06, width: WIDTH * 0.06, borderRadius: WIDTH * 0.6 / 2, borderColor: "#B89962", borderWidth: 2, backgroundColor: "#B89962", position: "absolute", right: HEIGHT * 0.01, bottom:  Platform.OS === 'ios' ? 35 : 41, }]} >
                                         <Pressable onPress={() => setColor(index)} >
                                             {color === index ? <Image source={whiteHeart} /> : <Image source={item.like} />}
                                         </Pressable>
@@ -79,6 +79,7 @@ const HomeScreen = ({ navigation }) => {
                         <Text style={{ color: "black", fontSize: 13, fontWeight: '500' }} >VENDORS</Text>
                         <View style={{ marginTop: HEIGHT * 0.01, width: WIDTH }} >
                             <FlatList
+                                style={{ width: WIDTH }}
                                 showsHorizontalScrollIndicator={false}
                                 horizontal
                                 data={homeVendors}
@@ -92,10 +93,6 @@ const HomeScreen = ({ navigation }) => {
                         </View>
                     </View>
                 </View>
-                {/* <View style={{ height: HEIGHT *0.06 }} > */}
-                {/* <Image style={{}} source={homeOfferImage} /> */}
-                {/* </View> */}
-
             </SafeAreaView>
         </View>
     )

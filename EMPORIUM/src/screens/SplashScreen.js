@@ -1,35 +1,29 @@
-import AsyncStorage from '@react-native-async-storage/async-storage'
 import React, { useEffect } from 'react'
 import { View, Text, Image, ImageBackground, SafeAreaView } from 'react-native'
 import { splashImage, emporiumImage } from "../assests/index"
 import { HEIGHT, WIDTH } from "../constants/Dimensions"
+import AsyncStorage from '@react-native-async-storage/async-storage'
+
 
 
 const SplashScreen = ({ navigation }) => {
-
-
-
   const getData = async () => {
     const value = await AsyncStorage.getItem('loggedIn')
-      value ?navigation.navigate("HomeScreen"): navigation.navigate("GetStartedScreen")
+    value ? navigation.navigate("HomeScreen") : navigation.navigate("GetStartedScreen")
     console.log("value", value);
   }
   useEffect(() => {
     getData()
-
-}, [])
-
-  return (
-    <View style={{ flex: 1 }} >
-      <ImageBackground style={{ flex: 1 }} resizeMode='cover' source={splashImage} >
-        <View style={{ alignItems: "center", justifyContent: "center", marginTop: HEIGHT * 0.13 }} >
-          <Image source={emporiumImage} />
-        </View>
-      </ImageBackground>
+  }, [])
+  return <View style={{ flex: 1 }} >
+    <ImageBackground style={{ flex: 1 }} resizeMode='cover' source={splashImage} >
+      <View style={{ alignItems: "center", justifyContent: "center", marginTop: HEIGHT * 0.13 }} >
+        <Image source={emporiumImage} />
+      </View>
+    </ImageBackground>
+  </View>
 
 
-    </View>
-  )
 }
 
 export default SplashScreen

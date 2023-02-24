@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, SafeAreaView, FlatList, Image, Pressable, Modal } from 'react-native'
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
-import { bellIcon, drawerIcon, whiteTick3, whiteTick2 } from "../assests/index"
+import { bellIcon, drawerIcon, whiteTick3, whiteTick2,orderCompleteIcon } from "../assests/index"
 import { cardDetails } from '../constants/FlatlistArray'
 import HeaderComponent from '../components/HeaderComponent'
 import PaymentProgress from '../components/PaymentProgress'
@@ -89,7 +89,12 @@ const CardDetailsScreen = ({ navigation }) => {
                                 padding: 36,
                                 alignItems: 'center', justifyContent: "center"
                             }}>
-                                <Text style={{ textAlign: "center", marginHorizontal: WIDTH * 0.05 }}> Your orderhas been sucessfully completed Thank you</Text>
+                                <Image style={{marginBottom:HEIGHT*0.03}}  source={orderCompleteIcon} />
+                                <View style={{marginBottom:HEIGHT*0.02}} >
+                                     <Text style={{ textAlign: "center",fontSize:18, }}> Your orderhas been sucessfully </Text>
+                                <Text style={{ textAlign: "center",fontSize:18 }}> completed Thank you</Text>  
+                                </View>
+                             
                                 <Pressable
                                     style={{ backgroundColor: "#B89962", padding: 16, width: WIDTH * 0.4, marginTop: HEIGHT * 0.02 }}
                                     onPress={() => navigation.navigate
@@ -101,7 +106,7 @@ const CardDetailsScreen = ({ navigation }) => {
                     </Modal>
 
                 </View>
-                <View style={{ marginTop: HEIGHT * 0.02 }} >
+                <View style={{ marginTop: HEIGHT * 0.03 }} >
                     <ButtonComponent navigation={() => setModalVisible(true)} title="NEXT" />
                     <Pressable onPress={() => navigation.goBack()} >
                         <Text style={{ color: "#A8A398", textAlign: "center", marginTop: HEIGHT * 0.01 }} >Cancel</Text>

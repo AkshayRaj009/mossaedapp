@@ -9,6 +9,7 @@ const GeneralDetailsComponent = () => {
     return (
         <View style={{ marginTop: HEIGHT * 0.04, backgroundColor: "#FFFFFF250" }}>
             <FlatList
+            style={{marginLeft:HEIGHT*0.02}}
                 numColumns={2}
                 data={makeUpDatas}
                 keyExtractor={item => item.id}
