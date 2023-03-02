@@ -17,12 +17,12 @@ const MakeUpScreen = ({ navigation }) => {
     const slideshow = (type) => {
         switch (type) {
             case "GENERAL":
-                return <View style={{ width: WIDTH,height:HEIGHT*0.888 }}>
+                return <View style={{ width: WIDTH, height: HEIGHT * 0.888 }}>
                     <GeneralDetailsComponent />
                 </View>
 
             case "FACE":
-                return <View style={{width: WIDTH }}>
+                return <View style={{ width: WIDTH }}>
                     <GeneralDetailsComponent />
                 </View>
 
@@ -46,8 +46,7 @@ const MakeUpScreen = ({ navigation }) => {
                             <Pressable onPress={() => { ScrollView(index) }} style={{ marginHorizontal: HEIGHT * 0.008 }} >
                                 <Text style={{ color: "#A8A398" }} >{item.title}</Text>
                             </Pressable>
-                        }
-                    />
+                        } />
                 </View>
                 <FlatList
                     showsHorizontalScrollIndicator={false}

@@ -38,7 +38,7 @@ const AddressScreen = ({ navigation }) => {
                         keyExtractor={item => item.id}
                         renderItem={({ item, index }) =>
                             <Pressable onPress={() => setColor(index)} >
-                                <View style={{ backgroundColor: "#ffffff60", marginHorizontal: 20, flex:1, marginTop: 10 }} >
+                                <View style={{ backgroundColor: "#ffffff60", marginHorizontal: 20, flex: 1, marginTop: 10 }} >
                                     <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginHorizontal: HEIGHT * 0.02, marginTop: HEIGHT * 0.02 }}>
                                         <Text style={{}} >{item.name}</Text>
                                         {color === index ? <Image source={yellowStar} /> : <Image source={item.image} />}

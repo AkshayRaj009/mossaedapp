@@ -14,28 +14,27 @@ const SaraDetailsComponent = (props) => {
                 <View>
                     {status && <OrderStausComponent />}
                 </View>
-
                 <View style={{ marginTop: HEIGHT * 0.02 }} >
                     <FlatList
                         data={orderDetails}
                         keyExtractor={item => item.id}
                         renderItem={({ item }) =>
                             <View style={{}}>
-                                <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+                                <View style={{ flexDirection: "row",  }}>
                                     <Text style={{ fontWeight: "600", fontSize: 18, }}>{item.title}</Text>
-                                    <Text style={{ paddingLeft: HEIGHT * 0.20 }}>{item.item}</Text>
+                                    <Text style={{ paddingLeft: HEIGHT * 0.21 }}>{item.item}</Text>
                                 </View>
-                                <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: HEIGHT * 0.02 }}>
+                                <View style={{ flexDirection: "row", marginTop: HEIGHT * 0.02 }}>
                                     <Text style={{ color: "#A8A398" }} >{item.subtotal}</Text>
-                                    <Text>{item.qar}</Text>
+                                    <Text style={{ paddingLeft: HEIGHT * 0.25 }} >{item.qar}</Text>
                                 </View>
-                                <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: HEIGHT * 0.01 }}>
+                                <View style={{ flexDirection: "row",  marginTop: HEIGHT * 0.01 }}>
                                     <Text style={{ color: "#A8A398" }} >{item.shipping}</Text>
-                                    <Text>{item.qar2}</Text>
+                                    <Text style={{ paddingLeft: HEIGHT * 0.23 }}>{item.qar2}</Text>
                                 </View>
-                                <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: HEIGHT * 0.01 }}>
+                                <View style={{ flexDirection: "row",  marginTop: HEIGHT * 0.01 }}>
                                     <Text style={{ color: "#A8A398" }} >{item.total}</Text>
-                                    <Text>{item.qar3}</Text>
+                                    <Text style={{ paddingLeft: HEIGHT * 0.28 }}>{item.qar3}</Text>
                                 </View>
                             </View>
                         }

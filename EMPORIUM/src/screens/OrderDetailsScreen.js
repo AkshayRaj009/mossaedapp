@@ -1,13 +1,12 @@
-import React, { useRef } from 'react'
-import { View, Text, SafeAreaView, FlatList, Pressable, Image } from 'react-native'
+import React from 'react'
+import { View, Text, SafeAreaView, FlatList, Image } from 'react-native'
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
-import { bellIcon, blackBackArrow, whiteHeart, saraAhamed3 } from "../assests/index"
-import { addressData, homeProduct, makeupData, makeupDetails } from '../constants/FlatlistArray'
+import { bellIcon, blackBackArrow, saraAhamed3 } from "../assests/index"
+import { addressData, homeProduct } from '../constants/FlatlistArray'
 import HeaderComponent from '../components/HeaderComponent'
 import HomeProductComponent from '../components/HomeProductComponent'
 import OrderDetailsComponent from '../components/OrderDetailsComponent'
 import SaraDetailsComponent from '../components/SaraDetailsComponent'
-import ButtonComponent from '../components/ButtonComponent'
 import OrderStausComponent from '../components/OrderStausComponent'
 
 const OrderDetailsScreen = ({ navigation }) => {
@@ -22,7 +21,7 @@ const OrderDetailsScreen = ({ navigation }) => {
                 </View>
                 <View style={{ marginTop: HEIGHT * 0.03 }} >
                     <FlatList
-                    style={{marginHorizontal:WIDTH*0.04}}
+                        style={{ marginHorizontal: WIDTH * 0.04 }}
                         showsHorizontalScrollIndicator={false}
                         horizontal
                         data={homeProduct}
@@ -37,7 +36,6 @@ const OrderDetailsScreen = ({ navigation }) => {
                         <Text style={{ fontSize: 18, fontWeight: "600" }} >Order Status</Text>
                         <OrderStausComponent />
                     </View>
-
                 </View>
                 <View>
                     <View style={{ marginTop: HEIGHT * 0.05, marginHorizontal: WIDTH * 0.04 }} >

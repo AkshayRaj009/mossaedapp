@@ -4,8 +4,6 @@ import { splashImage, emporiumImage } from "../assests/index"
 import { HEIGHT, WIDTH } from "../constants/Dimensions"
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
-
-
 const SplashScreen = ({ navigation }) => {
   const getData = async () => {
     const value = await AsyncStorage.getItem('loggedIn')
@@ -13,7 +11,9 @@ const SplashScreen = ({ navigation }) => {
     console.log("value", value);
   }
   useEffect(() => {
-    getData()
+    setTimeout(() => {
+      getData()
+    }, 2000)
   }, [])
   return <View style={{ flex: 1 }} >
     <ImageBackground style={{ flex: 1 }} resizeMode='cover' source={splashImage} >
@@ -23,7 +23,5 @@ const SplashScreen = ({ navigation }) => {
     </ImageBackground>
   </View>
 
-
 }
-
 export default SplashScreen

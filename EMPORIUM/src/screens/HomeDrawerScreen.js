@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, SafeAreaView, TextInput, Image, FlatList, Pressable } from 'react-native'
+import { View, Text, SafeAreaView, ScrollView, Image, FlatList, Pressable } from 'react-native'
 import { drawerImage, logOutIcon } from "../assests/index"
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
 import { drawerData } from '../constants/FlatlistArray'
@@ -10,7 +10,9 @@ const HomeDrawerScreen = ({ navigation }) => {
     return (
         <View>
             <Image source={drawerImage} />
-            <SafeAreaView>
+            <SafeAreaView  >
+                <ScrollView style={{height:HEIGHT*0.700}} >
+
                 <View style={{ marginTop: HEIGHT * 0.0 }} >
                     <FlatList
                         data={drawerData}
@@ -37,6 +39,8 @@ const HomeDrawerScreen = ({ navigation }) => {
                         <Text style={{ color: "#A8A398", paddingLeft: HEIGHT * 0.04, fontSize: 19 }} >Log Out</Text>
                     </Pressable>
                 </View>
+                </ScrollView>
+
             </SafeAreaView>
         </View>
     )

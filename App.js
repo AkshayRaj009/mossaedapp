@@ -23,6 +23,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Emporium from "../MyApp/EMPORIUM/Emporium"
+import Sjo from "../MyApp/SJO/Sjo"
 const HEIGHT = Dimensions.get('window').width;
 const WIDTH = Dimensions.get('window').height
 
@@ -37,9 +38,11 @@ const App = () => {
       <StatusBar
         // barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         // backgroundColor={backgroundStyle.backgroundColor}
+        
         barStyle={"dark-content"}
       />
-          <Emporium />
+          {/* <Emporium /> */}
+          <Sjo />
    </View>
   );
 };

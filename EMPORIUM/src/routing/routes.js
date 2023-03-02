@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react'
-import { Image, View } from 'react-native'
+import React from 'react'
+import { Image, TouchableOpacity, View } from 'react-native'
 import { homeIcon, cartIcon, categoriesIcon, profileIcon, orderIcon } from "../assests/index"
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
-import Animated, { interpolate, useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
+import Animated, { BounceInDown, FadeIn, FadeInDown, FadeOut, interpolate, useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
 import SplashScreen from '../screens/SplashScreen';
 import GetStartedScreen from '../screens/GetStartedScreen';
 import SignUpScreen from '../screens/SignUpScreen';
@@ -85,56 +85,53 @@ const Bottom = () => {
   const transform = useSharedValue(0);
   const style = useAnimatedStyle(() => {
     return {
-      // height: withTiming(transform.value * 10, {
-      //     duration: 1000,
-
-      // }),
-      // width: withTiming(transform.value * 10, {
-      //     duration: 3000,
-
-      // }),
-      // borderRadius: withTiming(transform.value * 100, {
-      //     duration: 2000,
-
-      // }),
-      // transform: [{ scale: withTiming(transform.value * 100, { duration: 3000 }) }]
     };
   });
   return (
- 
-      <BottomTab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false }}  >
-        <BottomTab.Screen options={{
-          tabBarIcon: () => {
-            return (
-              <Image source={homeIcon} style={{ tintColor: "#B89962" }} />
-            )
 
-          }
-        }} name="Home" component={HomeScreen} />
-        <BottomTab.Screen options={{
-          tabBarIcon: () => {
-            return (
-              <Image source={categoriesIcon} />
-            )
-          }
-        }} name="Categories" component={CategoriesScreen} />
-        <BottomTab.Screen options={{
-          tabBarIcon: () => {
-            return <Image source={cartIcon} />
-          }
-        }} name="Cart" component={AddToCart} />
-        <BottomTab.Screen options={{
-          tabBarIcon: () => {
-            return <Image source={orderIcon} />
-          }
-        }} name="My Orders" component={OrdersListScreen} />
-        <BottomTab.Screen options={{
-          tabBarIcon: () => {
-            return <Image source={profileIcon} />
-          }
-        }} name="My Profile" component={ProfileScreen} />
-      </BottomTab.Navigator>
- 
+    <BottomTab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false }}  >
+      <BottomTab.Screen options={{
+        tabBarIcon: (props) => {
+          return (
+            <Animated.View entering={FadeIn.delay(props.id * 390)}  >
+              <Image source={homeIcon} style={{ tintColor: "#B89962" }} />
+            </Animated.View>
+
+          )
+        }
+      }} name="Home" component={HomeScreen} />
+      <BottomTab.Screen options={{
+        tabBarIcon: (props) => {
+          return (
+            <Animated.View entering={FadeInDown.delay(props.id * 390)}  >
+              <Image source={categoriesIcon} style={{ tintColor: "#B89962" }} />
+            </Animated.View>
+          )
+        }
+      }} name="Categories" component={CategoriesScreen} />
+      <BottomTab.Screen options={{
+        tabBarIcon: (props) => {
+          return <Animated.View entering={FadeInDown.delay(props.id * 390)}  >
+            <Image source={cartIcon} style={{ tintColor: "#B89962" }} />
+          </Animated.View>
+        }
+      }} name="Cart" component={AddToCart} />
+      <BottomTab.Screen options={{
+        tabBarIcon: (props) => {
+          return <Animated.View entering={FadeInDown.delay(props.id * 390)}  >
+            <Image source={orderIcon} style={{ tintColor: "#B89962" }} />
+          </Animated.View>
+        }
+      }} name="My Orders" component={OrdersListScreen} />
+      <BottomTab.Screen options={{
+        tabBarIcon: (props) => {
+          return <Animated.View entering={FadeInDown.delay(props.id * 390)}  >
+            <Image source={profileIcon} style={{ tintColor: "#B89962" }} />
+          </Animated.View>
+        }
+      }} name="My Profile" component={ProfileScreen} />
+    </BottomTab.Navigator>
+
 
   )
 }

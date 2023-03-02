@@ -51,7 +51,6 @@ const HomeDrawerScreen = ({ navigation }) => {
                    <Text style={{ color: "#fff", fontSize: 18 }}>Logout</Text>
                 </Pressable>
                 <ModalComponent
-                // style1={{ height: HEIGHT * 0.50, width: WIDTH * 0.90, marginTop: 11, borderRadius: 13 }}
                 style2={{backgroundColor:"grey",width:WIDTH*0.70,height:HEIGHT*0.25}}
                 titleStyle={{color:"black"}}
                 visible={ModalVisible}

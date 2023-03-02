@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { View, Image, Dimensions } from "react-native"
-import HeaderComponent from './HeaderComponent'
 import { rightbackarrow } from '../../mosaed/assets/Images/index';
 import { TextInput } from 'react-native-gesture-handler';
+import HeaderComponent from './HeaderComponent'
 import ButtonScreen from './ButtonScreen';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -10,7 +10,6 @@ const HEIGHT = Dimensions.get('window').width;
 const WIDTH = Dimensions.get('window').height;
 
 const ProfileScreen = ({ navigation }) => {
-    const [hidepassword, setHidepassword] = useState()
     
     return (
         <>

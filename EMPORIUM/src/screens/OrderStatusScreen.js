@@ -57,19 +57,19 @@ const OrderStatusScreen = ({ navigation }) => {
                             } />
                     </View>
                 </View>
-                  case "AHMED2":
-                    return <View style={{}}>
-                        <SaraDetailsComponent status={true} title="Order Status" />
-                        <View style={{ marginTop: HEIGHT * 0.02, }} >
-                            <FlatList
-                                showsHorizontalScrollIndicator={false}
-                                contentContainerStyle={{ flexDirection: 'row' }}
-                                data={homeProduct}
-                                keyExtractor={item => item.id}
-                                renderItem={({ item }) => <HomeProductComponent navigation={() => navigation.navigate("OrderDetailsScreen")}  {...item} />
-                                } />
-                        </View>
+            case "AHMED2":
+                return <View style={{}}>
+                    <SaraDetailsComponent status={true} title="Order Status" />
+                    <View style={{ marginTop: HEIGHT * 0.02, }} >
+                        <FlatList
+                            showsHorizontalScrollIndicator={false}
+                            contentContainerStyle={{ flexDirection: 'row' }}
+                            data={homeProduct}
+                            keyExtractor={item => item.id}
+                            renderItem={({ item }) => <HomeProductComponent navigation={() => navigation.navigate("OrderDetailsScreen")}  {...item} />
+                            } />
                     </View>
+                </View>
         }
     }
     return (
@@ -99,7 +99,7 @@ const OrderStatusScreen = ({ navigation }) => {
                                         ScrollView(index)
                                         setColor(index)
                                     }} >
-                                        <Text style={{ textAlign: 'center', paddingLeft: HEIGHT * 0.0126, color: color === index ? "black" : "grey" }}  >{item.text}</Text>
+                                        <Text style={{ textAlign: 'center', paddingLeft: HEIGHT * 0.0126, color: color === index ? "black" : "grey" }} >{item.text}</Text>
                                         <View style={{ paddingLeft: HEIGHT * 0.0 }} >
                                             <View style={{ position: 'absolute', top: HEIGHT * 0.0186, height: HEIGHT * 0.002, width: WIDTH * 0.3077, backgroundColor: color === index ? "#B89962" : "transparent", left: -44 }} />
                                         </View>
@@ -110,7 +110,7 @@ const OrderStatusScreen = ({ navigation }) => {
                 </View>
                 <View style={{ width: WIDTH }} >
                     <FlatList
-                        showsHorizontalScrollIndicator={false}
+                        showsHorizontalScrollIndicator={false}x
                         horizontal
                         pagingEnabled={true}
                         scrollEnabled={false}

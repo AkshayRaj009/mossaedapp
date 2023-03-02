@@ -5,7 +5,7 @@ import {whiteTick3 } from "../assests/index"
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
 
 const PaymentProgress = (props) => {
-    const { borderColor,color,textStyle,summaryStyle,style3,border,image } = props
+    const { borderColor,color,textStyle,summaryStyle,style3,border,image1,image } = props
     return (
         <View>
             <View style={{ marginHorizontal: HEIGHT * 0.04, marginTop: HEIGHT * 0.04 }}>
@@ -15,7 +15,7 @@ const PaymentProgress = (props) => {
                     </View>
                     <View style={[{ borderWidth: 1, height: 1, width: WIDTH * 0.33, borderColor: "#DFE1DE" },borderColor]} />
                     <View style={[{ justifyContent: "center", alignItems: "center", height: WIDTH * 0.05, width: WIDTH * 0.05, borderRadius: WIDTH * 0.5 / 2, borderColor: "#DFE1DE", borderWidth: 2 },color]} >
-                        <Image style={{}} source={image} />
+                        <Image style={{}} source={image1} />
                     </View>
                     <View style={[{ borderWidth: 1, height: 1, width: WIDTH * 0.33, borderColor: "#DFE1DE" },border]} />
                     <View style={{ justifyContent: "center", alignItems: "center", height: WIDTH * 0.05, width: WIDTH * 0.05, borderRadius: WIDTH * 0.5 / 2, borderColor: "#DFE1DE", borderWidth: 2 }} />

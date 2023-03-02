@@ -1,20 +1,16 @@
-import { View, Text, Image, ImageBackground, SafeAreaView, Pressable } from 'react-native'
 import React from 'react'
+import { View, Text, ImageBackground, SafeAreaView, Pressable } from 'react-native'
 import { signUpImage, backArrow } from "../assests/index"
 import { HEIGHT } from '../constants/Dimensions'
-
 import HeaderComponent from '../components/HeaderComponent'
 import TextInputComponent from '../components/TextInputComponent'
 import ButtonComponent from '../components/ButtonComponent'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const SignUpScreen = ({ navigation }) => {
-    
-        const setData = async () => {
-         await  AsyncStorage.setItem('loggedIn',"true")
-
-
-         }
+    const setData = async () => {
+        await AsyncStorage.setItem('loggedIn', "true")
+    }
     return (
         <View style={{ flex: 1 }} >
             <ImageBackground style={{ height: HEIGHT * 0.36 }} resizeMode="cover" source={signUpImage}>
@@ -36,11 +32,13 @@ const SignUpScreen = ({ navigation }) => {
                 </View>
             </View>
             <ButtonComponent navigation={() => {
-                  setData()
-                navigation.navigate("HomeScreen")}} title="SIGNUP" />
-            <Pressable onPress={() =>{
-              
-                 navigation.navigate("HomeScreen")}} style={{ alignItems: "center", marginTop: HEIGHT * 0.03 }} >
+                setData()
+                navigation.navigate("HomeScreen")
+            }} title="SIGNUP" />
+            <Pressable onPress={() => {
+
+                navigation.navigate("HomeScreen")
+            }} style={{ alignItems: "center", marginTop: HEIGHT * 0.03 }} >
                 <Text style={{ color: "#B89962", fontSize: 21 }} >Continue as Guest</Text>
             </Pressable>
         </View >

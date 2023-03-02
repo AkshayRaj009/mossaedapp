@@ -11,8 +11,9 @@ const NotificationScreen = ({ navigation }) => {
       <SafeAreaView>
         <HeaderComponent drawernavigation={() => navigation.goBack()} title="NOTIFICATIONS" image={blackBackArrow} />
       </SafeAreaView>
-      <View style={{ marginTop: HEIGHT * 0.03, height: HEIGHT * 0.907 }} >
+      <View style={{ marginTop: HEIGHT * 0.03 }} >
         <FlatList
+          style={{ height: HEIGHT * 0.869 }}
           data={notification}
           keyExtractor={item => item.id}
           renderItem={({ item }) =>
@@ -21,7 +22,7 @@ const NotificationScreen = ({ navigation }) => {
                 <Text style={{ fontSize: 18, fontWeight: "600" }} >{item.title}</Text>
                 <Text style={{ marginTop: HEIGHT * 0.01 }} >{item.text}</Text>
                 <Text style={{}} >{item.text1}</Text>
-                <View style={{ borderWidth: 1, borderColor: "#70707010",marginBottom:HEIGHT*0.01 }} />
+                <View style={{ borderWidth: 1, borderColor: "#70707010", marginBottom: HEIGHT * 0.01 }} />
                 <Text style={{ fontSize: 10, color: "#A8A398" }} >{item.date}</Text>
               </View>
             </View>

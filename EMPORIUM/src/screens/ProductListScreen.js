@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { View, Text, SafeAreaView, TextInput, Image, FlatList, Pressable, ImageBackground } from 'react-native'
 import { bellIcon, blackBackArrow, homeProductImage, plusImage, whiteLove, ahmed } from "../assests/index"
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
 import { colors } from '../constants/FlatlistArray'
+import { ScrollView } from 'react-native-gesture-handler'
 import HeaderComponent from '../components/HeaderComponent'
 
 const ProductListScreen = ({ navigation }) => {
-
     return (
         <View>
             <ImageBackground style={{ flex: 1, height: HEIGHT * 0.57 }} source={homeProductImage} >
@@ -23,6 +23,8 @@ const ProductListScreen = ({ navigation }) => {
                         <Image style={{ backgroundColor: "#B89962", marginHorizontal: 15 }} source={plusImage} />
                     </View>
                 </View>
+                <ScrollView>
+
                 <View style={{ marginHorizontal: 20 }} >
                     <View style={{ flexDirection: "row" }} >
                         <Image source={ahmed} />
@@ -53,6 +55,8 @@ const ProductListScreen = ({ navigation }) => {
                         </View>
                     </View>
                 </View>
+                </ScrollView>
+
             </View>
 
 

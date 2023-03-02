@@ -2,10 +2,9 @@ import { useDrawerProgress } from '@react-navigation/drawer'
 import React, { useState } from 'react'
 import { View, Text, SafeAreaView, TextInput, Image, FlatList, Pressable } from 'react-native'
 import { drawerIcon,bellIcon } from "../assests/index"
-import HeaderComponent from '../components/HeaderComponent'
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
 import Animated, { interpolate, useAnimatedStyle } from 'react-native-reanimated';
-
+import HeaderComponent from '../components/HeaderComponent'
 
 const AboutUsScreen = ({navigation}) => {
   const drawerProgress = useDrawerProgress()

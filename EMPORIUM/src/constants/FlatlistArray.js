@@ -1,27 +1,27 @@
-import { handMadeSuit, earingImage, studsImage, likeIcon, ramiAhmed, ramiAhmed2, skinCare, clockImage, walletImage, greenRightArrow, saraAhmedImage, lanaWael, saraAhamed2, handBag, cardIcon, visaIcon, minus, plus, clockBag, drawerHome, location, wisthList, support, contactIcon, termsIcon, aboutUs, languageIcon, starImage, earings2, handBag2, handBag3, earings3, yellowHeart, hairCare, bathBody, fragrances,homeSliderImage ,homeMainImage} from "../assests/index"
+import { handMadeSuit, earingImage, studsImage, likeIcon, ramiAhmed, ramiAhmed2, skinCare, clockImage, walletImage, greenRightArrow, saraAhmedImage, lanaWael, saraAhamed2, handBag, cardIcon, visaIcon, minus, plus, clockBag, drawerHome, location, wisthList, support, contactIcon, termsIcon, aboutUs, languageIcon, starImage, earings2, handBag2, handBag3, earings3, yellowHeart, hairCare, bathBody, fragrances, homeSliderImage, homeMainImage } from "../assests/index"
 import { HEIGHT } from "./Dimensions"
 
 
-export const sliderData=[
+export const sliderData = [
     {
-        id:1,
-        image:homeMainImage
+        id: 1,
+        image: homeMainImage
     },
     {
-        id:2,
-        image:homeSliderImage
+        id: 2,
+        image: homeSliderImage
     },
     {
-        id:3,
-        image:homeMainImage
+        id: 3,
+        image: homeMainImage
     },
     {
-        id:4,
-        image:homeSliderImage
+        id: 4,
+        image: homeSliderImage
     },
     {
-        id:5,
-        image:homeMainImage
+        id: 5,
+        image: homeMainImage
     }
 ]
 
@@ -41,8 +41,6 @@ export const homeProduct = [
         text: "250 QAR",
         like: likeIcon,
         path: "ProductListScreen"
-
-
     },
     {
         id: 3,
@@ -51,7 +49,6 @@ export const homeProduct = [
         text: "250 QAR",
         like: likeIcon,
         path: "ProductListScreen"
-
     },
     {
         id: 4,
@@ -60,8 +57,6 @@ export const homeProduct = [
         text: "250 QAR",
         like: likeIcon,
         path: "ProductListScreen"
-
-
     },
     {
         id: 5,
@@ -70,8 +65,6 @@ export const homeProduct = [
         text: "250 QAR",
         like: likeIcon,
         path: "ProductListScreen"
-
-
     },
     {
         id: 6,
@@ -80,7 +73,6 @@ export const homeProduct = [
         text: "250 QAR",
         like: likeIcon,
         path: "productListScreen"
-
     },
     {
         id: 7,
@@ -89,9 +81,7 @@ export const homeProduct = [
         text: "250 QAR",
         like: likeIcon,
         path: "productListScreen"
-
     }
-
 ]
 export const homeVendors = [
     {
@@ -262,7 +252,8 @@ export const orderList = [
         status: "Status",
         track: "Track",
         arrow: greenRightArrow,
-        pending: "Pending",
+        pending: "On The Way",
+        color: "#10AABC",
         path: "OrderStatusScreen"
     },
     {
@@ -279,7 +270,8 @@ export const orderList = [
         status: "Status",
         track: "Track",
         arrow: greenRightArrow,
-        pending: "Pending",
+        pending: "Delivered",
+        color: "#10BC82",
         path: "OrderStatusScreen"
     },
     {
@@ -297,6 +289,7 @@ export const orderList = [
         track: "Track",
         arrow: greenRightArrow,
         pending: "On The Way",
+        color: "#10AABC",
         path: "OrderStatusScreen"
     }
 ]

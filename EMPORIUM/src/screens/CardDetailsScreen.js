@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, SafeAreaView, FlatList, Image, Pressable, Modal } from 'react-native'
+import { bellIcon, drawerIcon, whiteTick3, whiteTick2, orderCompleteIcon } from "../assests/index"
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
-import { bellIcon, drawerIcon, whiteTick3, whiteTick2,orderCompleteIcon } from "../assests/index"
 import { cardDetails } from '../constants/FlatlistArray'
 import HeaderComponent from '../components/HeaderComponent'
 import PaymentProgress from '../components/PaymentProgress'
@@ -26,7 +26,7 @@ const CardDetailsScreen = ({ navigation }) => {
                         keyExtractor={item => item.id}
                         renderItem={({ item, index }) =>
                             <Pressable onPress={() => setShowcolor(index)} >
-                                <View style={{ backgroundColor: "#fff", marginHorizontal: WIDTH * 0.06, flex:1, marginTop: HEIGHT * 0.02 }}  >
+                                <View style={{ backgroundColor: "#fff", marginHorizontal: WIDTH * 0.06, flex: 1, marginTop: HEIGHT * 0.02 }}  >
                                     <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginHorizontal: WIDTH * 0.02 }}>
                                         <Image source={item.image} />
                                         <View style={{ justifyContent: "center", alignItems: "center", height: WIDTH * 0.06, width: WIDTH * 0.06, borderRadius: WIDTH * 0.5 / 2, borderColor: "#DFE1DE", borderWidth: 1, backgroundColor: color === index ? "#B89962" : "#fff" }} >
@@ -89,12 +89,12 @@ const CardDetailsScreen = ({ navigation }) => {
                                 padding: 36,
                                 alignItems: 'center', justifyContent: "center"
                             }}>
-                                <Image style={{marginBottom:HEIGHT*0.03}}  source={orderCompleteIcon} />
-                                <View style={{marginBottom:HEIGHT*0.02}} >
-                                     <Text style={{ textAlign: "center",fontSize:18, }}> Your orderhas been sucessfully </Text>
-                                <Text style={{ textAlign: "center",fontSize:18 }}> completed Thank you</Text>  
+                                <Image style={{ marginBottom: HEIGHT * 0.03 }} source={orderCompleteIcon} />
+                                <View style={{ marginBottom: HEIGHT * 0.02 }} >
+                                    <Text style={{ textAlign: "center", fontSize: 18, }}> Your orderhas been sucessfully </Text>
+                                    <Text style={{ textAlign: "center", fontSize: 18 }}> completed Thank you</Text>
                                 </View>
-                             
+
                                 <Pressable
                                     style={{ backgroundColor: "#B89962", padding: 16, width: WIDTH * 0.4, marginTop: HEIGHT * 0.02 }}
                                     onPress={() => navigation.navigate

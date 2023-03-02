@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, SafeAreaView, FlatList, Image, Pressable } from 'react-native'
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
-import { bellIcon, drawerIcon, whiteTick2,saleOfferImage } from "../assests/index"
+import { bellIcon, drawerIcon, whiteTick2, whiteTick3 } from "../assests/index"
 import { checkoutDetails } from '../constants/FlatlistArray'
 import HeaderComponent from '../components/HeaderComponent'
 import PaymentProgress from '../components/PaymentProgress'
@@ -24,7 +24,7 @@ const CheckOutScreen = ({ navigation }) => {
                         keyExtractor={item => item.id}
                         renderItem={({ item, index }) =>
                             <Pressable onPress={() => setShowColor(index)} >
-                                <View style={{ backgroundColor: "#ffffff60", marginHorizontal: 20, height: HEIGHT * 0.19, marginTop: 10 }} >
+                                <View style={{ backgroundColor: "#ffffff60", marginHorizontal: 20, height: Platform.OS === 'ios' ? 165 : 176, marginTop: 10 }} >
                                     <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginHorizontal: HEIGHT * 0.02, marginTop: HEIGHT * 0.02 }}>
                                         <Text style={{}} >{item.name}</Text>
 
@@ -41,9 +41,9 @@ const CheckOutScreen = ({ navigation }) => {
                             </Pressable>
                         } />
                 </View>
-                <View style={{ borderWidth: 1.5, borderStyle: "dashed", borderColor: "#B89962", padding: 12, marginHorizontal: WIDTH * 0.09, marginTop: HEIGHT * 0.02 }} >
+                <Pressable onPress={() => navigation.navigate("CheckOutPaymentScreen")} style={{ borderWidth: 1.5, borderStyle: "dashed", borderColor: "#B89962", padding: 12, marginHorizontal: WIDTH * 0.09, marginTop: HEIGHT * 0.02 }} >
                     <Text style={{ color: "#B89962", fontSize: 22, textAlign: "center" }} >+ADD NEW ADDRESS</Text>
-                </View>
+                </Pressable>
                 <View style={{ marginTop: HEIGHT * 0.138 }} >
                     <ButtonComponent navigation={() => navigation.navigate("CheckOutPaymentScreen")} title="NEXT" />
                     <Pressable onPress={() => navigation.goBack()} >
