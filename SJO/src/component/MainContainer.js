@@ -11,8 +11,9 @@ const MainContainer = (props) => {
     const { title, image, leftLogo, titleStyle, children, leftImage, color, statusbarStyle, style2, backStyle, navigation,text } = props
 
     return (
+        <>
+        <Image style={{ position: "absolute", left: 0, top: 0 ,tintColor:colors.Yellow,zIndex:2}} source={leftImage} />
         <View style={[{ flex: 1, backgroundColor: colors.darkWhite }, statusbarStyle]} >
-            <Image style={{ position: "absolute", left: 0, top: 0 }} source={leftImage} />
             <View style={[{ height: HEIGHT * 0.05, width: WIDTH, marginTop: Platform.OS === "android" ? StatusBar.currentHeight : HEIGHT * 0.05, backgroundColor: colors.offWhite }, color]}>
                 <View style={[{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginHorizontal: WIDTH * 0.04, marginTop: HEIGHT * 0.001 }, style2]} >
                     <Pressable onPress={navigation} >
@@ -32,6 +33,8 @@ const MainContainer = (props) => {
             </View>
             <SafeAreaView style={{ backgroundColor: colors.offWhite, flex: 1 }} >{children}</SafeAreaView>
         </View>
+        </>
+
 
 
     )

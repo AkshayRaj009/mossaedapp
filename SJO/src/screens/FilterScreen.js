@@ -10,6 +10,8 @@ import ButtonComponent from '../component/ButtonComponent'
 
 const FilterScreen = (props) => {
   const { navigation } = props
+  console.log(HEIGHT*0.075);
+
   return (
     <View style={{ flex: 1 }}>
       <SafeAreaView style={{ backgroundColor: colors.Yellow, flex: 0 }} />
@@ -28,7 +30,7 @@ const FilterScreen = (props) => {
               </View>
             } />
         </View>
-        <ButtonComponent navigation={() => navigation.navigate("CarsScreen")} title="View Cars" style={{ flex: 1 }} />
+        <ButtonComponent navigation={() => navigation.navigate("CarsScreen")} style={{ height: HEIGHT * 0.10,marginTop:HEIGHT*0.075 }} titleStyle={{ fontSize: 13, color: "black" }} title="View cars" />
       </MainContainer>
     </View>
 

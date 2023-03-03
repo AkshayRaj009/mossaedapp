@@ -18,8 +18,7 @@ const CarsListScreen = (props) => {
     const slideshow = (type) => {
         switch (type) {
             case "SARA":
-                return <View style={{}} >
-                    <View>
+                return <View>
                         <Image style={{ width: WIDTH, marginTop: 0, zIndex: -1, borderBottomLeftRadius: 30, borderBottomRightRadius: 30, height: HEIGHT * 0.44 }} source={BMWImage} />
                         <View style={{
                             alignItems: "center", marginTop: HEIGHT
@@ -45,10 +44,8 @@ const CarsListScreen = (props) => {
                             </View>
                         </View>
                     </View>
-                </View>
             case "LANA":
-                return <View style={{}} >
-                    <View>
+                return  <View>
                         <Image style={{ width: WIDTH, marginTop: 0, zIndex: -1, borderBottomLeftRadius: 30, borderBottomRightRadius: 30, height: HEIGHT * 0.44 }} source={BMWImage} />
                         <View style={{
                             alignItems: "center", marginTop: HEIGHT
@@ -60,21 +57,17 @@ const CarsListScreen = (props) => {
                         </View>
                         <View style={{ height: HEIGHT * 0.36 }}>
                             <FlatList
-                                style={{}}
                                 data={carlistData}
                                 keyExtractor={item => item.id}
                                 renderItem={({ item }) =>
-                                    <View  >
-                                        <CarListComponent color={item.color} {...item} />
-                                    </View>
+                                    <CarListComponent color={item.color} {...item} />
                                 } />
                             <View style={{ marginHorizontal: WIDTH * 0.05, marginBottom: HEIGHT * 0.03 }} >
                                 <Text style={{ marginBottom: HEIGHT * 0.02, color: colors.lightGrey, fontSize: 20 }} >Another details</Text>
                                 <Text style={{ color: colors.grey, fontSize: 20 }} >This text is an example of a text that can be replaced in the same space</Text>
                             </View>
                         </View>
-                    </View>
-                </View>
+                    </View>   
         }
     }
     return (
@@ -103,7 +96,8 @@ const CarsListScreen = (props) => {
                     visible={modalVisible}
                     onPress={() => {
                         setModalVisible2(false)
-                        setModalVisible(false)}}
+                        setModalVisible(false)
+                    }}
                     button={true}
                 >
                 </ModalComponent>

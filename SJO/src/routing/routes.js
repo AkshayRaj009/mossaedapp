@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { View, Text, SafeAreaView, Image, FlatList } from 'react-native'
 
-import { Image, TouchableOpacity, View } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { homeImage, calenderIcon, orderIcon, notificationIcon } from "../assests/index"
+import { colors } from '../constants/colors';
 import SplashScreen from "../../../SJO/src/screens/SplashScreen"
 import LoginScreen from '../screens/LoginScreen';
 import HomeScreen from '../screens/HomeScreen';
@@ -25,6 +26,15 @@ import CompaniesFilterScreen from '../screens/CompaniesFilterScreen';
 import GoldenHorseScreen from '../screens/GoldenHorseScreen';
 import PropertyFilterScreen from '../screens/PropertyFilterScreen';
 import PropertyScreen from '../screens/PropertyScreen';
+import LandFilterScreen from '../screens/LandFilterScreen';
+import LandScreen from '../screens/LandScreen';
+import HorseFilterScreen from '../screens/HorseFilterScreen';
+import HorseScreen from '../screens/HorseScreen';
+import HorseListScreen from '../screens/HorseListScreen';
+import InvestmentFilterScreen from '../screens/InvestmentFilterScreen';
+import AlrayyanScreen from '../screens/AlrayyanScreen';
+import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
+import ConferenceScreen from '../screens/ConferenceScreen';
 
 const Route = createStackNavigator();
 const Router = () => {
@@ -48,14 +58,14 @@ const Router = () => {
       <Route.Screen name='GoldenHorseScreen' component={GoldenHorseScreen} />
       <Route.Screen name='PropertyFilterScreen' component={PropertyFilterScreen} />
       <Route.Screen name='PropertyScreen' component={PropertyScreen} />
-
-
-
-
-
-      
-      
-
+      <Route.Screen name='LandFilterScreen' component={LandFilterScreen} />
+      <Route.Screen name='LandScreen' component={LandScreen} />
+      <Route.Screen name='HorseFilterScreen' component={HorseFilterScreen} />
+      <Route.Screen name='HorseScreen' component={HorseScreen} />
+      <Route.Screen name='HorseListScreen' component={HorseListScreen} />
+      <Route.Screen name='InvestmentFilterScreen' component={InvestmentFilterScreen} />
+      <Route.Screen name='AlrayyanScreen' component={AlrayyanScreen} />
+      <Route.Screen name='ConferenceScreen' component={ConferenceScreen} />
 
 
 
@@ -70,13 +80,16 @@ const Router = () => {
 
 const BottomTab = createBottomTabNavigator();
 const Bottom = () => {
+  const [color, setColor] = useState(false)
   return (
 
-    <BottomTab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false }}  >
+    <BottomTab.Navigator initialRouteName='Home' screenOptions={{ headerShown: false, tabBarShowLabel: false }}  >
 
       <BottomTab.Screen options={{
         tabBarIcon: (props) => {
-          return <Image source={notificationIcon} style={{}} />
+          return(
+            <Image source={notificationIcon} />
+          )
         }
       }} name="NotificatonScreen" component={NotificatonScreen} />
 
@@ -92,7 +105,7 @@ const Bottom = () => {
       }} name="ManageOrderScreen" component={ManageOrderScreen} />
       <BottomTab.Screen options={{
         tabBarIcon: (props) => {
-          return <Image source={homeImage} style={{}} />
+          return  <Image source={homeImage} style={{ tintColor: color ? colors.Yellow :colors.grey}} />
         }
       }} name="Home" component={HomeScreen} />
 

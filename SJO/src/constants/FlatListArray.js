@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { profileImage, lockImage, arrowImage, carImage, watchImage, number, companiesImage, estateImage, investmentImage, horseImage, benzImage, loaction, carBack, carRing, carLocation, sendIcon, moadalLocation, arrow, jewelleyIcon, companyImage, rolexImage, jewImage } from "../assests/index"
+import { profileImage, lockImage, arrowImage, carImage, watchImage, number, companiesImage, estateImage, investmentImage, horseImage, benzImage, loaction, carBack, carRing, carLocation, sendIcon, moadalLocation, arrow, jewelleyIcon, companyImage, rolexImage, jewImage, brownHorse, camelIamges, camelcon,qdbImage } from "../assests/index"
 import { colors } from "./colors"
 import { HEIGHT, WIDTH } from "./Dimensions"
 
@@ -46,32 +46,37 @@ export const HomeData = [
         title: "Companies",
         arrow: arrowImage,
         image: companiesImage,
-        path:"CompaniesFilterScreen"
+        path: "CompaniesFilterScreen"
     },
     {
         id: 5,
         title: "Real estates",
         arrow: arrowImage,
         image: estateImage,
-        path:"PropertyFilterScreen"
+        path: "PropertyFilterScreen"
     },
     {
         id: 6,
         title: "Lands",
         arrow: arrowImage,
-        image: investmentImage
+        image: investmentImage,
+        path: "LandFilterScreen"
     },
     {
         id: 7,
         title: "Investment",
         arrow: arrowImage,
-        image: carImage
+        image: carImage,
+        path: "InvestmentFilterScreen"
+
     },
     {
         id: 8,
         title: "Horse & Camels",
         arrow: arrowImage,
-        image: horseImage
+        image: horseImage,
+        path: "HorseFilterScreen"
+
     }
 ]
 
@@ -674,8 +679,8 @@ export const companiesData = [
     {
         id: 1,
         image: companyImage,
-        title1:"Gulf Transport Company",
-        text:"Chemical industries",
+        title1: "Gulf Transport Company",
+        text: "Chemical industries",
         title: "Qatar,Doha,Mirqab mall",
         order: "Create an order",
         arrow: carBack,
@@ -685,8 +690,8 @@ export const companiesData = [
     {
         id: 2,
         image: companyImage,
-        title1:"Gulf Transport Company",
-        text:"Chemical industries",
+        title1: "Gulf Transport Company",
+        text: "Chemical industries",
         title: "Qatar,Doha,Mirqab mall",
         order: "Create an order",
         arrow: carBack,
@@ -696,8 +701,8 @@ export const companiesData = [
     {
         id: 3,
         image: companyImage,
-        title1:"Gulf Transport Company",
-        text:"Chemical industries",
+        title1: "Gulf Transport Company",
+        text: "Chemical industries",
         title: "Qatar,Doha,Mirqab mall",
         order: "Create an order",
         arrow: carBack,
@@ -707,8 +712,8 @@ export const companiesData = [
     {
         id: 4,
         image: companyImage,
-        title1:"Gulf Transport Company",
-        text:"Chemical industries",
+        title1: "Gulf Transport Company",
+        text: "Chemical industries",
         title: "Qatar,Doha,Mirqab mall",
         order: "Create an order",
         arrow: carBack,
@@ -718,8 +723,8 @@ export const companiesData = [
     {
         id: 5,
         image: companyImage,
-        title1:"Gulf Transport Company",
-        text:"Chemical industries",
+        title1: "Gulf Transport Company",
+        text: "Chemical industries",
         title: "Qatar,Doha,Mirqab mall",
         order: "Create an order",
         arrow: carBack,
@@ -729,8 +734,8 @@ export const companiesData = [
     {
         id: 6,
         image: companyImage,
-        title1:"Gulf Transport Company",
-        text:"Chemical industries",
+        title1: "Gulf Transport Company",
+        text: "Chemical industries",
         title: "Qatar,Doha,Mirqab mall",
         order: "Create an order",
         arrow: carBack,
@@ -740,8 +745,8 @@ export const companiesData = [
     {
         id: 7,
         image: companyImage,
-        title1:"Gulf Transport Company",
-        text:"Chemical industries",
+        title1: "Gulf Transport Company",
+        text: "Chemical industries",
         title: "Qatar,Doha,Mirqab mall",
         order: "Create an order",
         arrow: carBack,
@@ -751,8 +756,8 @@ export const companiesData = [
     {
         id: 8,
         image: companyImage,
-        title1:"Gulf Transport Company",
-        text:"Chemical industries",
+        title1: "Gulf Transport Company",
+        text: "Chemical industries",
         title: "Qatar,Doha,Mirqab mall",
         order: "Create an order",
         arrow: carBack,
@@ -762,8 +767,8 @@ export const companiesData = [
     {
         id: 9,
         image: companyImage,
-        title1:"Gulf Transport Company",
-        text:"Chemical industries",
+        title1: "Gulf Transport Company",
+        text: "Chemical industries",
         title: "Qatar,Doha,Mirqab mall",
         order: "Create an order",
         arrow: carBack,
@@ -830,4 +835,269 @@ export const property = [
         id: 2,
         case: "second"
     }
+]
+export const land = [
+    {
+        id: 1,
+        case: "first"
+    },
+    {
+        id: 2,
+        case: "second"
+    }
+]
+export const horseFilter = [
+    {
+        id: 1,
+        title: "Turkmenistan",
+        text: "Type"
+
+    },
+    {
+        id: 2,
+        title: "Qatar",
+        text: "Country"
+
+    },
+
+]
+export const camel = [
+    {
+        id: 1,
+        case: "first"
+    },
+    {
+        id: 2,
+        case: "second"
+    }
+]
+export const horseData = [
+    {
+        id: 1,
+        image: brownHorse,
+        title: "Brown",
+        color: "Colors",
+        order: "Create an order",
+        location: loaction,
+        path: "HorseListScreen"
+    },
+    {
+        id: 2,
+        image: brownHorse,
+        title: "Brown",
+        order: "Create an order",
+        color: "Colors",
+        location: loaction,
+        path: "HorseListScreen"
+    },
+    {
+        id: 3,
+        image: brownHorse,
+        title: "Brown",
+        color: "Colors",
+        order: "Create an order",
+        location: loaction,
+        path: "HorseListScreen"
+    },
+    {
+        id: 4,
+        image: brownHorse,
+        title: "Brown",
+        color: "Colors",
+        order: "Create an order",
+        location: loaction,
+        path: "HorseListScreen"
+    },
+    {
+        id: 5,
+        image: brownHorse,
+        title: "Brown",
+        color: "Colors",
+        order: "Create an order",
+        location: loaction,
+        path: "HorseListScreen"
+    }
+]
+export const camelData = [
+    {
+        id: 1,
+        image: camelIamges,
+        title: "Camel Race",
+        order: "Create an order",
+        location: camelcon,
+        path: "HorseListScreen"
+    },
+    {
+        id: 2,
+        image: camelIamges,
+        title: "Camel Race",
+        order: "Create an order",
+        location: camelcon,
+        path: "HorseListScreen"
+    },
+    {
+        id: 3,
+        image: camelIamges,
+        title: "Camel Race",
+        order: "Create an order",
+        location: camelcon,
+        path: "HorseListScreen"
+
+
+
+    },
+    {
+        id: 4,
+        image: camelIamges,
+        title: "Camel Race",
+        order: "Create an order",
+        location: camelcon,
+        path: "HorseListScreen"
+    },
+    {
+        id: 5,
+        image: camelIamges,
+        title: "Camel Race",
+        order: "Create an order",
+        location: camelcon,
+        path: "HorseListScreen"
+    }
+]
+export const investmentData = [
+    {
+        id: 1,
+        image: qdbImage,
+        title1: "QNB",
+        text: "Investment12547",
+        title: "2,500",
+        order: "Create an order",
+        arrow: carBack,
+        qar: "QAR",
+        path: "AlrayyanScreen"
+    },
+    {
+        id: 2,
+        image: qdbImage,
+        title1: "QNB",
+        text: "Investment12547",
+        title: "2,500",
+        order: "Create an order",
+        arrow: carBack,
+        qar: "QAR",
+        path: "AlrayyanScreen"
+    },
+    {
+        id: 3,
+        image: qdbImage,
+        title1: "QNB",
+        text: "Investment12547",
+        title: "2,500",
+        order: "Create an order",
+        arrow: carBack,
+        qar: "QAR",
+        path: "AlrayyanScreen"
+    },
+    {
+        id: 4,
+        image: qdbImage,
+        title1: "QNB",
+        text: "Investment12547",
+        title: "2,500",
+        order: "Create an order",
+        arrow: carBack,
+        qar: "QAR",
+        path: "AlrayyanScreen"
+    },
+    {
+        id: 5,
+        image: qdbImage,
+        title1: "QNB",
+        text: "Investment12547",
+        title: "2,500",
+        order: "Create an order",
+        arrow: carBack,
+        qar: "QAR",
+        path: "AlrayyanScreen"
+    },
+    {
+        id: 6,
+        image: qdbImage,
+        title1: "QNB",
+        text: "Investment12547",
+        title: "2,500",
+        order: "Create an order",
+        arrow: carBack,
+        qar: "QAR",
+        path: "AlrayyanScreen"
+    },
+    {
+        id: 7,
+        image: qdbImage,
+        title1: "QNB",
+        text: "Investment12547",
+        title: "2,500",
+        order: "Create an order",
+        arrow: carBack,
+        qar: "QAR",
+        path: "AlrayyanScreen"
+    },
+    {
+        id: 8,
+        image: qdbImage,
+        title1: "QNB",
+        text: "Investment12547",
+        title: "2,500",
+        order: "Create an order",
+        arrow: carBack,
+        qar: "QAR",
+        path: "AlrayyanScreen"
+    },
+    {
+        id: 9,
+        image: qdbImage,
+        title1: "QNB",
+        text: "Investment12547",
+        title: "2,500",
+        order: "Create an order",
+        arrow: carBack,
+        qar: "QAR",
+        path: "AlrayyanScreen"
+    },
+]
+export const bank = [
+    {
+        id: 1,
+        case: "first"
+    },
+    {
+        id: 2,
+        case: "second"
+    }
+]
+export const calenderData = [
+    {
+        id: 1,
+        time:"9:00 am",
+        title:"Qatar Union Conference",
+        text:"Qatar,Doha,Mirqab mall",
+        location:loaction,
+        path:"ConferenceScreen"
+    },
+    {
+        id: 2,
+        time:"9:00 am",
+        title:"Qatar Union Conference",
+        text:"Qatar,Doha,Mirqab mall",
+        location:loaction,
+        path:"ConferenceScreen"
+    },
+    {
+        id: 3,
+        time:"9:00 am",
+        title:"Qatar Union Conference",
+        text:"Qatar,Doha,Mirqab mall",
+        location:loaction,
+        path:"ConferenceScreen"
+    },
+
 ]

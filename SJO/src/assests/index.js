@@ -47,5 +47,15 @@ import companyImage from "../assests/Images/companyImage/companyImage.png"
 import goldenHores from "../assests/Images/goldenHores/goldenHores.png"
 import vivre from "../assests/Images/vivre/vivre.png"
 import firstProperty from "../assests/Images/firstProperty/firstProperty.png"
+import landsImage from "../assests/Images/landsImage/landsImage.png"
+import camelImage from "../assests/Images/camelImage/camelImage.png"
+import smallHorse from "../assests/Images/smallHorse/smallHorse.png"
+import brownHorse from "../assests/Images/brownHorse/brownHorse.png"
+import camelIamges from "../assests/Images/camelIamges/camelIamges.png"
+import camelcon from "../assests/Images/camelIcon/camelcon.png"
+import horseTypes from "../assests/Images/horseType/horseTypes.png"
+import qdbImage from "../assests/Images/qdbImage/qdbImage.png"
+import alRay from "../assests/Images/alRay/alRay.png"
 
-export { sjoLogo, spalshHorse, spalshLeftImage, loginLogo, loginLeftImage, profileImage, lockImage, leftArrow, rightArrow, loginHorse, homeLeftIcon, homeScreenLogo, arrowImage, carImage, watchImage, number, companiesImage, estateImage, landImage, investmentImage, horseImage,homeImage,calenderIcon,orderIcon,notificationIcon,crossIcon,rightBackArrow,drawerIcon,benzImage,carBack,loaction,BMWImage,bmwLogo,carRing,carLocation,sendIcon,moadalLocation,arrow,numIcon,jewelleyIcon,watcheIcon,rolexImage,ringImage,jewImage,watches,companyImage,goldenHores,vivre,firstProperty}
+
+export { sjoLogo, spalshHorse, spalshLeftImage, loginLogo, loginLeftImage, profileImage, lockImage, leftArrow, rightArrow, loginHorse, homeLeftIcon, homeScreenLogo, arrowImage, carImage, watchImage, number, companiesImage, estateImage, landImage, investmentImage, horseImage,homeImage,calenderIcon,orderIcon,notificationIcon,crossIcon,rightBackArrow,drawerIcon,benzImage,carBack,loaction,BMWImage,bmwLogo,carRing,carLocation,sendIcon,moadalLocation,arrow,numIcon,jewelleyIcon,watcheIcon,rolexImage,ringImage,jewImage,watches,companyImage,goldenHores,vivre,firstProperty,landsImage,camelImage,smallHorse,brownHorse,camelIamges,camelcon,horseTypes,qdbImage,alRay}

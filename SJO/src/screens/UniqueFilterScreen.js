@@ -4,7 +4,7 @@ import { View, Text, SafeAreaView, Image, Platform, FlatList, Pressable, TextInp
 import { drawerIcon, rightBackArrow, carBack, crossIcon } from "../assests/index"
 import { colors } from "../constants/colors"
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
-import { carListData, JewelleryInput, uniqueFilter } from "../constants/FlatListArray"
+import { uniqueFilter } from "../constants/FlatListArray"
 import MainContainer from '../component/MainContainer'
 import FilterComponent from '../component/FilterComponent'
 import TextInputComponent from '../component/TextInputComponent'
@@ -24,9 +24,7 @@ const UniqueFilterScreen = ({ navigation }) => {
                         data={uniqueFilter}
                         keyExtractor={item => item.id}
                         renderItem={({ item }) =>
-                            <View  >
-                                <TextInputComponent placeholderStyle={{ paddingLeft: WIDTH * 0.35 }} placeholder={item.title} text={item.text} />
-                            </View>
+                            <TextInputComponent placeholderStyle={{ paddingLeft: WIDTH * 0.35 }} placeholder={item.title} text={item.text} />
                         } />
                     <View>
                         <View style={{ flexDirection: "row", marginLeft: WIDTH * 0.30 }} >

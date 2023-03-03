@@ -4,8 +4,6 @@ import { View, Text, SafeAreaView, Image, Platform, FlatList, Pressable, TextInp
 import { drawerIcon, rightBackArrow, BMWImage, sendIcon } from "../assests/index"
 import { colors } from "../constants/colors"
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
-import { carListData } from "../constants/FlatListArray"
-import MainContainer from '../component/MainContainer'
 
 const CarListComponent = (props) => {
     const { title, num, image, style1, color, color2 } = props
@@ -23,7 +21,7 @@ const CarListComponent = (props) => {
                 </View>
             </View>
             <View style={{ borderWidth: 1, borderColor: colors.borderGrey }} />
-            
+
 
         </View>
 
