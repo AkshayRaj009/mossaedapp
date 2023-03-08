@@ -25,7 +25,7 @@ export const HomeData = [
         title: "Cars",
         arrow: arrowImage,
         image: carImage,
-        path: "FilterScreen"
+        // path: "PatternPrinting"
     },
     {
         id: 2,

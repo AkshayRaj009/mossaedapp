@@ -12,10 +12,10 @@ const HomeScreen = (props) => {
     return (
         <>
             <SafeAreaView style={{ backgroundColor: colors.White, flex: 0 }} />
-            <MainContainer titleStyle={{ marginLeft: WIDTH * 0.08, color: colors.Yellow }} title="Home" image={homeLeftIcon} leftImage={spalshLeftImage} color={{ backgroundColor: colors.White, marginTop: Platform.OS === "android" ? StatusBar.currentHeight : HEIGHT * 0 }} >
+            <MainContainer titleStyle={{ marginLeft: WIDTH * 0.08, color: colors.Yellow }} title="Home" image={homeLeftIcon} leftImage={spalshLeftImage} color={{ backgroundColor: colors.White, marginTop: Platform.OS === "android" ? StatusBar.currentHeight : HEIGHT * 0, }} >
                 <View style={{ backgroundColor: colors.White, height: HEIGHT * 0.20, borderBottomRightRadius: 26, borderBottomLeftRadius: 26 }} >
                     {/* <Image style={{ position: "absolute", left: 0,top:0 }} source={spalshLeftImage} /> */}
-                    <View style={{ marginHorizontal: WIDTH * 0.10 }} >
+                    <View style={{ marginHorizontal: WIDTH * 0.10 ,borderWidth:1}} >
                         <Image source={homeScreenLogo} />
                         <Text style={{ color: colors.Yellow, fontSize: 26, fontWeight: "400" }} >Welcome</Text>
                         <View style={{ marginTop: Platform.OS === 'ios' ? 41 : 85 }} >

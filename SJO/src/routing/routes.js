@@ -34,13 +34,14 @@ import HorseListScreen from '../screens/HorseListScreen';
 import InvestmentFilterScreen from '../screens/InvestmentFilterScreen';
 import AlrayyanScreen from '../screens/AlrayyanScreen'
 import ConferenceScreen from '../screens/ConferenceScreen';
+import PatternPrinting from '../screens/PatternPrinting';
 
 const Route = createStackNavigator();
 const Router = () => {
   return (
     <Route.Navigator screenOptions={{ headerShown: false, gestureDirection: "horizontal-inverted" }} >
-      <Route.Screen name='SplashScreen' component={SplashScreen} />
-      <Route.Screen name='LoginScreen' component={LoginScreen} />
+      {/* <Route.Screen name='SplashScreen' component={SplashScreen} /> */}
+      {/* <Route.Screen name='LoginScreen' component={LoginScreen} /> */}
       <Route.Screen name='HomeScreen' component={Bottom} />
       <Route.Screen name='CarsScreen' component={CarsScreen} />
       <Route.Screen name='FilterScreen' component={FilterScreen} />
@@ -65,11 +66,7 @@ const Router = () => {
       <Route.Screen name='InvestmentFilterScreen' component={InvestmentFilterScreen} />
       <Route.Screen name='AlrayyanScreen' component={AlrayyanScreen} />
       <Route.Screen name='ConferenceScreen' component={ConferenceScreen} />
-
-
-
-
-
+      <Route.Screen name='PatternPrinting' component={PatternPrinting} />
 
 
 
@@ -86,7 +83,7 @@ const Bottom = () => {
 
       <BottomTab.Screen options={{
         tabBarIcon: (props) => {
-          return(
+          return (
             <Image source={notificationIcon} />
           )
         }
@@ -104,7 +101,7 @@ const Bottom = () => {
       }} name="ManageOrderScreen" component={ManageOrderScreen} />
       <BottomTab.Screen options={{
         tabBarIcon: (props) => {
-          return  <Image source={homeImage} style={{ tintColor: color ? colors.Yellow :colors.grey}} />
+          return <Image source={homeImage} style={{ tintColor: color ? colors.Yellow : colors.grey }} />
         }
       }} name="Home" component={HomeScreen} />
 

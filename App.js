@@ -22,8 +22,9 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Emporium from "../mossaedapp/EMPORIUM/Emporium"
-import Sjo from "../mossaedapp/SJO/Index"
+import Emporium from "../MyApp/EMPORIUM/Emporium"
+import Sjo from "../MyApp/SJO/Sjo"
+import Pattern from "../MyApp/PatternPrinting/index"
 const HEIGHT = Dimensions.get('window').width;
 const WIDTH = Dimensions.get('window').height
 
@@ -43,6 +44,7 @@ const App = () => {
       />
           {/* <Emporium /> */}
           <Sjo />
+          {/* <Pattern/> */}
    </View>
   );
 };
