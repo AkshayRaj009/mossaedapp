@@ -32,8 +32,7 @@ import HorseFilterScreen from '../screens/HorseFilterScreen';
 import HorseScreen from '../screens/HorseScreen';
 import HorseListScreen from '../screens/HorseListScreen';
 import InvestmentFilterScreen from '../screens/InvestmentFilterScreen';
-import AlrayyanScreen from '../screens/AlrayyanScreen';
-import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
+import AlrayyanScreen from '../screens/AlrayyanScreen'
 import ConferenceScreen from '../screens/ConferenceScreen';
 
 const Route = createStackNavigator();

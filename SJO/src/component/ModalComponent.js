@@ -32,7 +32,7 @@ const ModalComponent = (props) => {
                                         } style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", }} >
                                             <Image source={item?.arrow} />
 
-                                            <Text style={{ marginHorizontal: WIDTH * 0.09, fontSize: 16 }} >{item?.title}</Text>
+                                            <Text style={{ marginHorizontal: WIDTH * 0.09, fontSize: 16 }} >Bring a car to the current location</Text>
                                             <Image source={item?.image} />
                                         </Pressable>
                                         <View style={{ borderWidth: 1, borderColor: colors.borderGrey, marginHorizontal: WIDTH * 0, marginRight: WIDTH * 0.09, marginTop: HEIGHT * 0.021 }} />

@@ -1,5 +1,5 @@
 import React from 'react'
-import Index from "../../MyApp/SJO/Index"
+import Index from "../SJO/Index"
 
 const sjo = () => {
     return (

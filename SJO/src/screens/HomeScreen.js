@@ -1,12 +1,11 @@
 import React from 'react'
-import { View, Text, SafeAreaView, Image, Platform, FlatList, Pressable } from 'react-native'
+import { View, Text, SafeAreaView, Image, Platform, FlatList, Pressable, StatusBar } from 'react-native'
 
 import { homeLeftIcon, spalshLeftImage, homeScreenLogo } from "../assests/index"
 import { colors } from "../constants/colors"
 import { HEIGHT, WIDTH } from '../constants/Dimensions'
 import { HomeData } from "../constants/FlatListArray"
 import MainContainer from '../component/MainContainer'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
 
 const HomeScreen = (props) => {
     const { navigation } = props

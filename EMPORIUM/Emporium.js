@@ -1,5 +1,5 @@
 import React from 'react';
-import Emporium from "../../MyApp/EMPORIUM"
+import Emporium from "../EMPORIUM/index"
 const Emporiums =()=>{
     return(
         <Emporium />

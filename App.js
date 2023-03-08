@@ -22,8 +22,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Emporium from "../MyApp/EMPORIUM/Emporium"
-import Sjo from "../MyApp/SJO/Sjo"
+import Emporium from "../mossaedapp/EMPORIUM/Emporium"
+import Sjo from "../mossaedapp/SJO/Index"
 const HEIGHT = Dimensions.get('window').width;
 const WIDTH = Dimensions.get('window').height
 
