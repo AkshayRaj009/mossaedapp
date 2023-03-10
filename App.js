@@ -24,7 +24,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import Emporium from "../MyApp/EMPORIUM/Emporium"
 import Sjo from "../MyApp/SJO/Sjo"
-import Pattern from "../MyApp/PatternPrinting/index"
+import Pattern from "./PatternPrinting/pattern"
 const HEIGHT = Dimensions.get('window').width;
 const WIDTH = Dimensions.get('window').height
 
@@ -43,8 +43,8 @@ const App = () => {
         barStyle={"dark-content"}
       />
           {/* <Emporium /> */}
-          <Sjo />
-          {/* <Pattern/> */}
+          {/* <Sjo /> */}
+          <Pattern/>
    </View>
   );
 };

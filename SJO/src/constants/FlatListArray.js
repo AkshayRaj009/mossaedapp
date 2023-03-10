@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { profileImage, lockImage, arrowImage, carImage, watchImage, number, companiesImage, estateImage, investmentImage, horseImage, benzImage, loaction, carBack, carRing, carLocation, sendIcon, moadalLocation, arrow, jewelleyIcon, companyImage, rolexImage, jewImage, brownHorse, camelIamges, camelcon,qdbImage } from "../assests/index"
+import { profileImage, lockImage, arrowImage, carImage, watchImage, number, companiesImage, estateImage, investmentImage, horseImage, benzImage, loaction, carBack, carRing, carLocation, sendIcon, moadalLocation, arrow, jewelleyIcon, companyImage, rolexImage, jewImage, brownHorse, camelIamges, camelcon, qdbImage } from "../assests/index"
 import { colors } from "./colors"
 import { HEIGHT, WIDTH } from "./Dimensions"
 
@@ -1077,27 +1077,27 @@ export const bank = [
 export const calenderData = [
     {
         id: 1,
-        time:"9:00 am",
-        title:"Qatar Union Conference",
-        text:"Qatar,Doha,Mirqab mall",
-        location:loaction,
-        path:"ConferenceScreen"
+        time: "9:00 am",
+        title: "Qatar Union Conference",
+        text: "Qatar,Doha,Mirqab mall",
+        location: loaction,
+        path: "ConferenceScreen"
     },
     {
         id: 2,
-        time:"9:00 am",
-        title:"Qatar Union Conference",
-        text:"Qatar,Doha,Mirqab mall",
-        location:loaction,
-        path:"ConferenceScreen"
+        time: "9:00 am",
+        title: "Qatar Union Conference",
+        text: "Qatar,Doha,Mirqab mall",
+        location: loaction,
+        path: "ConferenceScreen"
     },
     {
         id: 3,
-        time:"9:00 am",
-        title:"Qatar Union Conference",
-        text:"Qatar,Doha,Mirqab mall",
-        location:loaction,
-        path:"ConferenceScreen"
+        time: "9:00 am",
+        title: "Qatar Union Conference",
+        text: "Qatar,Doha,Mirqab mall",
+        location: loaction,
+        path: "ConferenceScreen"
     },
 
 ]

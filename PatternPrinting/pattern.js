@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-import Index from "../PatternPrinting/index"
+import Index from "./index"
 
-const array = () => {
+const Pattern = () => {
     return (
         <Index />
     )
 }
 
-export default array
+export default Pattern

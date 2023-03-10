@@ -131,10 +131,12 @@ def reactNativeArchitectures() {
 
 android {
     ndkVersion rootProject.ext.ndkVersion
-
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
+        missingDimensionStrategy 'react-native-camera', 'general' <-- insert this line
+        vectorDrawables.useSupportLibrary = true
+        targetSdkVersion 27
         applicationId "com.myapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion

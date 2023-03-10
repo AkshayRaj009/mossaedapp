@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { View, Text, FlatList,SafeAreaView } from 'react-native'
-import { HEIGHT, WIDTH } from "../constants/Dimensions"
+import { View, Text, FlatList, SafeAreaView } from 'react-native'
+import { HEIGHT } from "../constants/Dimensions"
 import { LeftArrow, StandardImage, customImage } from '../assests';
 import Animated, { BounceInDown } from 'react-native-reanimated';
 import HeaderComponent from '../components/HeaderComponent'
@@ -20,43 +20,43 @@ const BuildScreen = ({ navigation }) => {
       id: 1,
       image: StandardImage,
       title: "STANDARD",
-      BuildData: () =>standardfun(),
-      bordercolor:build.standard?"#0FC1A1":"#0E1114",
-      icon:build.standard?<Feather name='check' size={20} color="#FFF"/>:"",
-      color:build.standard?"#0FC1A1":"#fff",
-      margintop:HEIGHT*0
+      BuildData: () => standardfun(),
+      bordercolor: build.standard ? "#0FC1A1" : "#0E1114",
+      icon: build.standard ? <Feather name='check' size={20} color="#FFF" /> : "",
+      color: build.standard ? "#0FC1A1" : "#fff",
+      margintop: HEIGHT * 0
 
     },
     {
       id: 2,
       image: customImage,
       title: "CUSTOM",
-      BuildData :()=>customfun(),
-      bordercolor:build.custom?"#0FC1A1":"#0E1114",
-      icon:build.custom?<Feather name='check' size={20} color="#FFF"/>:"",
-      color:build.custom?"#0FC1A1":"#fff",
-      margintop:HEIGHT*0
+      BuildData: () => customfun(),
+      bordercolor: build.custom ? "#0FC1A1" : "#0E1114",
+      icon: build.custom ? <Feather name='check' size={20} color="#FFF" /> : "",
+      color: build.custom ? "#0FC1A1" : "#fff",
+      margintop: HEIGHT * 0
 
     },
   ]
 
   const standardfun = () => {
     setBuild({
-    ...build,
+      ...build,
       standard: true,
-      custom:false
+      custom: false
     })
   }
 
-  const customfun =()=>{
+  const customfun = () => {
     setBuild({
       ...build,
       standard: false,
-      custom:true
+      custom: true
     })
   }
 
-console.log("buld",build);
+  console.log("buld", build);
   return (
     <View style={{ backgroundColor: "black", flex: 1 }}>
       <View style={{ backgroundColor: "#181D23", height: HEIGHT * 0.40 }}>
@@ -67,7 +67,7 @@ console.log("buld",build);
             <Text style={{ color: "#fff", fontSize: 17, textAlign: "center", marginTop: 20 }}>Please Choose The Build Type,</Text>
             <Text style={{ color: "#fff", fontSize: 17, textAlign: "center", }}>Standard Or Custom</Text>
           </View>
-      </SafeAreaView>
+        </SafeAreaView>
       </View>
       <View style={{ marginTop: HEIGHT * 0.10 }}>
         <FlatList
@@ -75,17 +75,17 @@ console.log("buld",build);
           data={BuildData}
           keyExtractor={item => item.id}
           renderItem={({ item }) =>
-          <Animated.View entering={BounceInDown.delay(item.id * 450)} >
-            <ServicesComponent color={item.color} icon={item.icon} bordercolor={item.bordercolor} onPressFn={() => item.BuildData()} images={item.image} titles={item.title}  margintop={ item.margintop} />
+            <Animated.View entering={BounceInDown.delay(item.id * 450)} >
+              <ServicesComponent color={item.color} icon={item.icon} bordercolor={item.bordercolor} onPressFn={() => item.BuildData()} images={item.image} titles={item.title} margintop={item.margintop} />
             </Animated.View>
           }
         />
       </View>
       <View style={{ marginTop: HEIGHT * 0.10 }}>
-        <ButtonComponent buttonStyle={{ marginHorizontal: 25 }} title="VIEW CABANAS" navigation={() =>{
-          build.standard&&navigation.navigate("CabanaScreen")
-          build.custom&&navigation.navigate("CustomScreen")
-        } } />
+        <ButtonComponent buttonStyle={{ marginHorizontal: 25 }} title="VIEW CABANAS" navigation={() => {
+          build.standard && navigation.navigate("CabanaScreen")
+          build.custom && navigation.navigate("CustomScreen")
+        }} />
       </View>
     </View>
   )
