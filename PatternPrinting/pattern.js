@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-import Index from "./index"
+import Index from "../PatternPrinting/index"
 
 const Pattern = () => {
     return (

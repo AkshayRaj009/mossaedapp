@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, SafeAreaView, Pressable, Image, Linking } from 'react-native'
+import { View, Text, SafeAreaView, Pressable, Image, FlatList } from 'react-native'
 import ImagePicker from 'react-native-image-crop-picker'
 import QRCodeScanner from 'react-native-qrcode-scanner'
 

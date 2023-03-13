@@ -22,9 +22,10 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Emporium from "../MyApp/EMPORIUM/Emporium"
-import Sjo from "../MyApp/SJO/Sjo"
-import Pattern from "./PatternPrinting/pattern"
+import Emporium from "../mossaedapp/EMPORIUM/Emporium"
+import Sjo from "../mossaedapp/SJO/Sjo"
+import Pattern from "../mossaedapp/PatternPrinting/pattern"
+
 import Whatsapp from '../MyApp/WhatsApp/Whatsapp'
 const HEIGHT = Dimensions.get('window').width;
 const WIDTH = Dimensions.get('window').height
@@ -44,6 +45,8 @@ const App = () => {
         barStyle={"dark-content"}
       />
           {/* <Emporium /> */}
+          <Sjo />
+          {/* <Pattern/> */}
           {/* <Sjo /> */}
           {/* <Pattern/> */}
           <Whatsapp />

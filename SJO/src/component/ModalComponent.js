@@ -1,7 +1,6 @@
 import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { View, Text, SafeAreaView, Image, Platform, FlatList, Pressable, Modal, TouchableWithoutFeedback } from 'react-native'
-import { } from 'react-native-gesture-handler'
 
 import { drawerIcon, rightBackArrow, BMWImage, bmwLogo } from "../assests/index"
 import { colors } from "../constants/colors"
