@@ -25,6 +25,7 @@ import {
 import Emporium from "../MyApp/EMPORIUM/Emporium"
 import Sjo from "../MyApp/SJO/Sjo"
 import Pattern from "./PatternPrinting/pattern"
+import Whatsapp from '../MyApp/WhatsApp/Whatsapp'
 const HEIGHT = Dimensions.get('window').width;
 const WIDTH = Dimensions.get('window').height
 
@@ -44,7 +45,8 @@ const App = () => {
       />
           {/* <Emporium /> */}
           {/* <Sjo /> */}
-          <Pattern/>
+          {/* <Pattern/> */}
+          <Whatsapp />
    </View>
   );
 };

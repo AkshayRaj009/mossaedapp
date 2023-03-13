@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
-import { View, Text, SafeAreaView, Pressable, Image, FlatList } from 'react-native'
-import { RNCamera, FaceDetector } from 'react-native-camera'
+import { View, Text, SafeAreaView, Pressable, Image, Linking } from 'react-native'
 import ImagePicker from 'react-native-image-crop-picker'
+import QRCodeScanner from 'react-native-qrcode-scanner'
 
 const PhotoScreen = () => {
     const [remove, setRemove] = useState([])
     const [capture, setCapture] = useState()
+    const [scanner, setScanner] = useState()
 
     const removeitem = (item) => {
         setRemove(remove.filter((f) => f != item))
     }
-
 
     const gotoimagePicker = () => {
         ImagePicker.openPicker({
@@ -21,7 +21,7 @@ const PhotoScreen = () => {
             setRemove(image?.map((item) => item.path))
         })
     }
-    console.log("remove=>", remove)
+    console.log("remove=====>", remove);
 
     const camera = () => {
         ImagePicker.openCamera({
@@ -31,17 +31,24 @@ const PhotoScreen = () => {
         }).then(image => {
             console.log(image);
             setCapture(image.path)
-        });
+        })
     }
     console.log("capture==>>", capture)
+
+    onsuccess = e => {
+        Linking.openURL(e.data).catch(err =>
+            console.error('An error occured', err)
+        )
+        console.log("e==>>>>", e);
+    }
     return (
         <SafeAreaView style={{ backgroundColor: "#FAE5D3", flex: 1 }} >
             <View style={{ alignItems: "center", marginTop: 20, justifyContent: "center" }} >
                 <Pressable onPress={() => camera()} style={{ marginTop: 50, borderWidth: 2, padding: 7, justifyContent: "center", borderColor: "#273746" }} >
-                    <Text style={{}}>OPEN CAMERA</Text>
+                    <Text>OPEN CAMERA</Text>
                 </Pressable>
                 <View style={{ marginTop: 10, alignItems: "center" }} >
-                    <Image style={{ height: 70, width: 70, borderRadius: 10, marginVertical: 10, borderWidth: 1, borderColor: "#F5B041", marginHorizontal: 20 }} source={{ uri: capture }} />
+                    <Image style={{ height: 70, width: 70, borderRadius: 10, marginVertical: 10, borderWidth: capture ? 1 : 0, borderColor: "#F5B041", marginHorizontal: 20 }} source={{ uri: capture }} />
                 </View>
                 <View style={{ borderWidth: 2, padding: 7, alignItems: "center", justifyContent: "center", marginTop: 40, borderColor: "#273746" }} >
                     <Pressable >
@@ -62,11 +69,21 @@ const PhotoScreen = () => {
                 </View>
                 <View>
                 </View>
-                <View style={{ borderWidth: 2, padding: 7, alignItems: "center", justifyContent: "center", marginTop: 40, borderColor: "#273746" }} >
+                <Pressable onPress={() => setScanner(!scanner)} style={{ borderWidth: 2, padding: 7, alignItems: "center", justifyContent: "center", marginTop: 40, borderColor: "#273746" }} >
                     <Text>QR Code Scanner</Text>
-                </View>
+                </Pressable>
             </View>
-
+            {scanner &&
+                <QRCodeScanner
+                    onRead={(item) => onsuccess(item)}
+                    showMarker={true}
+                    topContent={
+                        <Text style={{ fontSize: 18, padding: 32, color: 'red' }}>
+                            <Text style={{}}>https/wikipedia.org/wiki/QR_code</Text>
+                        </Text>
+                    }
+                />
+            }
         </SafeAreaView>
     )
 }
